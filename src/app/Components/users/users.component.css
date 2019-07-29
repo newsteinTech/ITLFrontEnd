@@ -1,0 +1,8 @@
+.editUser:hover {
+    cursor:pointer;
+}
+
+.pagination{
+    position: relative;
+    left: 100px;
+}
