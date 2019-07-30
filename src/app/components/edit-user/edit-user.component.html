@@ -1,0 +1,65 @@
+
+<br>
+<div class="container col-md-6 col-md-offset-6">
+<form>
+    <!-- <div class="text-center"><h5>EDIT USER</h5></div><br> -->
+    <div class="form-row">
+    
+      <div class="form-group col-md-6">
+        <label> UserId</label>
+        <input type="text" class="form-control" name="USERID" placeholder="UserId" disabled>
+      </div>
+    
+     
+      <div class="form-group col-md-6">
+        <label >Name</label>
+        <input type="text" class="form-control" name="NAME" placeholder="Name" [(ngModel)]="updatedData.Name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label >Email</label>
+        <input type="email" class="form-control" name="EMAIL" placeholder="Email" [(ngModel)]="updatedData.Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label >Password</label>
+        <input type="password" class="form-control" name="PASSWORD" placeholder="Password" >
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputAddress2">Phone No.</label>
+      <input type="text" class="form-control" placeholder="Phone No." [(ngModel)]="updatedData.PhoneNo" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group col-md-6">
+        <label >Role</label>
+        <select class="form-control" [(ngModel)]="updatedData.Role" [ngModelOptions]="{standalone: true}">
+          <option selected>Choose...</option>
+          <option>Admin</option>
+          <option>ITIL Admin</option>
+          <option>Manager</option>
+          <option>CS Reps</option>
+        </select>
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label >Group</label>
+        <select multiple class="form-control" [(ngModel)]="updatedData.Group" [ngModelOptions]="{standalone: true}">
+          <option>Choose...</option>
+          <option *ngFor="let item of groupData">{{item.GroupId}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+     <div class="form-group col-md-6">
+    <button type="submit" class="btn btn-success btn-lg btn-block" (click)="updateUserHandler()">Update User</button>
+     </div>
+     <div class="form-group col-md-6">
+    <button class="btn btn-success btn-lg btn-block" type="submit" (click)="deleteUserHandler(updatedData)">
+      Delete User
+    </button>
+  </div>
+  </div>
+  </form>
+  </div>

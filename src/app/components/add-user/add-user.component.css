@@ -1,0 +1,10 @@
+.center_div{
+
+    margin: 20px;
+    position: relative;
+    padding: 50px;
+}
+.container{
+    height: 100%;
+    align-content: center;
+    }
