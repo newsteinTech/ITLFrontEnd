@@ -10,6 +10,9 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { UsersComponent } from './Components/users/users.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { EditUserComponent } from './Components/edit-user/edit-user.component';
+import { CreateUserComponent } from './Components/create-user/create-user.component';
+import { CreateGroupsComponent } from './Components/create-groups/create-groups.component';
+import { IncidentComponent } from './Components/incident/incident.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { EditUserComponent } from './Components/edit-user/edit-user.component';
     FooterComponent,
     UsersComponent,
     SideBarComponent,
-    EditUserComponent
+    EditUserComponent,
+    CreateUserComponent,
+    CreateGroupsComponent,
+    IncidentComponent
   ],
   imports: [
     BrowserModule,

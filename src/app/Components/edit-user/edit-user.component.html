@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-lg-6">
                             <label for="">UserId</label>
-                            <input type="text" name="userId" class="form-control" value="{{userData.UserId}}">
+                            <input type="text" name="userId" class="form-control" value="{{userData.UserId}} " readonly>
                         </div>
                     </div>
 
@@ -37,9 +37,22 @@
                     </div>
                     <br>
                     <br>
-                    <select multiple class="form-control">
-                        <option>Choose Groups</option>
-                    </select>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label>Existing Group</label>
+                            
+                            <select multiple class="form-control" >
+                                <option *ngFor = "let gr of Group">{{gr}}</option>
+                            </select>
+                                   
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Select Group</label>
+                            <select multiple class="form-control">
+                                <option>Choose Groups</option>
+                            </select>
+                        </div>
+                    </div>
                     <br>
                     <div class="row">
                         <div class="col-lg-6">

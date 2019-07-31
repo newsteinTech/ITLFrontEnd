@@ -17,12 +17,15 @@ export class EditUserComponent implements OnInit {
   Email:string;
   PhoneNo:string;
   UserId:string;
-    // Group:[];
+  Group:Array<any>;
   Password:string;
   Role:string;
   constructor( private services:UsersService, private routes:Router) {
 
     this.userData = this.services.userData[0];
+    console.log(this.userData.Group);
+    this.Group = this.userData.Group;
+    
     // this.Name = this.userData.Name;
     // console.log("Name: "+ this.Name);
 

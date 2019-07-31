@@ -1,0 +1,13 @@
+#ui{
+    margin-top: 8px;
+    background-color:rgb(83, 82, 75);
+    padding: 30px;
+}
+
+#ui label{
+    color: aliceblue;
+}
+
+#select{
+    margin-top: 33px;
+}

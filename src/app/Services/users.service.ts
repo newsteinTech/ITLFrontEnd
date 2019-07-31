@@ -55,4 +55,9 @@ export class UsersService {
     return this.httpClient.post<User>(url,req,{headers:this.header});
   }
 
+  public createUser(req:ReqUser):Observable<User>{
+    let url:string = this.host + "createUser";
+    return this.httpClient.post<User>(url,req,{headers:this.header});
+  }
+
 }

@@ -1,0 +1,19 @@
+#ui{
+    margin-top: 5px;
+    height: 95%;
+    background-color:rgb(83, 82, 75);
+    padding: 30px;
+}
+
+#ui label{
+    color: aliceblue;
+}
+
+#icon {
+    margin-top: 35px;
+    padding: 0px; 
+}
+
+#caller {
+    padding-right: 5px;
+}
