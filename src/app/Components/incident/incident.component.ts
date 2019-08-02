@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { UsersComponent } from '../users/users.component';
+import { TrialComponent } from '../trial/trial.component';
+
 
 @Component({
   selector: 'app-incident',
@@ -7,9 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncidentComponent implements OnInit {
 
-  constructor() {
+  userId;
+  constructor( private dialog:MatDialog ) {
 
-
+    this.userId = "";
 
   }
 
@@ -17,7 +22,20 @@ export class IncidentComponent implements OnInit {
   }
 
   getUsers(){
+
     console.log("Users");
+    let configDialog = new MatDialogConfig();
+    configDialog = new MatDialogConfig();
+    // configDialog.disableClose = true;
+    configDialog.autoFocus = true;
+    configDialog.width = "65%";
+    let diolagRef = this.dialog.open(TrialComponent,configDialog);
+    const sub = diolagRef.componentInstance.userI.subscribe((data)=>{
+      console.log(data);
+      this.userId = data;
+      this.dialog.closeAll();
+    })
+
   }
 
 }

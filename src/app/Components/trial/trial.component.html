@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="container col-md-6" >
+        <div *ngIf = "data != null">
+          <!-- {{data.Name}} -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">UserId</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <!-- <div *ngFor = "let data of data"> -->
+            <tbody *ngFor = "let data of data; index as i">
+              <tr *ngIf = "i<5">
+                <th scope="row">{{i+1}}</th>
+                <td>{{data.Name}}</td>
+                <td class="editUser" (click)= onButtonClick(data.UserId)>{{data.UserId}}</td>
+                <td>{{data.Email}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        
+        <nav aria-label="Page navigation example">
+          <ul class="pagination col-md-6">
+            <div *ngFor = "let val of value; index as j">
+            <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+            <!-- <li class="page-item"><a class="page-link" name="name" [(ngModel)] = val  >{{val}}</a></li> -->
+            <li class="page-item"><a class="page-link" (click)="pagi(j)" name="name">{{j+1}}</a></li>
+            <!-- <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li> -->
+            </div>
+            <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+          </ul>
+        </nav>
+    
+      </div>
+    </div>
+    <!-- </div> -->
+    
+    <!-- <table>
+      <tr ng-repeat="x in data">
+        <td>{{x.data}}</td>
+        <td>{{ x.Country }}</td>
+      </tr>
+    </table> -->
+        
+        
+    
+    
+    

@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-lg-5" id="caller">
                         <label for="">Caller</label>
-                        <input type="text" class="form-control" name="caller">
+                        <input type="text" class="form-control" name="caller" [(ngModel)] = userId>
                     </div>
                     <div class="col-lg-1" id="icon">
                         <button type="button" class="btn btn-primary btn-sm" (click) = getUsers()>

@@ -13,6 +13,9 @@ import { EditUserComponent } from './Components/edit-user/edit-user.component';
 import { CreateUserComponent } from './Components/create-user/create-user.component';
 import { CreateGroupsComponent } from './Components/create-groups/create-groups.component';
 import { IncidentComponent } from './Components/incident/incident.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TrialComponent } from './Components/trial/trial.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +27,19 @@ import { IncidentComponent } from './Components/incident/incident.component';
     EditUserComponent,
     CreateUserComponent,
     CreateGroupsComponent,
-    IncidentComponent
+    IncidentComponent,
+    TrialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TrialComponent]
 })
 export class AppModule { }
