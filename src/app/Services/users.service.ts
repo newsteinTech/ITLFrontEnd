@@ -60,4 +60,9 @@ export class UsersService {
     return this.httpClient.post<User>(url,req,{headers:this.header});
   }
 
+  public getGroup():Observable<User>{
+    let url:string = "http://localhost:3000/api/groups/getAllGroups";
+    return this.httpClient.get<User>(url);
+  }
+
 }

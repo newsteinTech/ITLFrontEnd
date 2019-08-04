@@ -1,0 +1,44 @@
+<form [formGroup] = "service.form" class="normal-form">
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden" formControlName = "$key">
+                <mat-form-field>
+                    <input formControlName = "Name" matInput placeholder="Full Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="Email" matInput placeholder="Email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="PhoneNo" matInput placeholder="Phone No">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="UserId" matInput placeholder="UserId">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="Password" matInput placeholder="Password">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-radio-group formControlName="Role">
+                    <mat-radio-button value="1">Admin</mat-radio-button>
+                    <mat-radio-button value="1">ITIL Admin</mat-radio-button>
+                    <mat-radio-button value="1">Manager</mat-radio-button>
+                    <mat-radio-button value="1">CS Reps</mat-radio-button>
+                    <mat-radio-button value="1">Employee</mat-radio-button>
+                </mat-radio-group>
+            
+            <mat-form-field>
+                <mat-select formControlName = "Group" placeholder="IT">
+                    <mat-option>None</mat-option>
+                    <mat-option>IT</mat-option>
+                    <mat-option>Finance</mat-option>
+                    <mat-option>Sales</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

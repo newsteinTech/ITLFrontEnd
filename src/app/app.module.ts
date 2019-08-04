@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {APP_BASE_HREF} from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,9 @@ import { IncidentComponent } from './Components/incident/incident.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TrialComponent } from './Components/trial/trial.component';
+import { MaterialModule } from './material/material.module';
+import { FormTrialComponent } from './form-trial/form-trial.component';
+import { MatRadioButton } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { TrialComponent } from './Components/trial/trial.component';
     CreateUserComponent,
     CreateGroupsComponent,
     IncidentComponent,
-    TrialComponent
+    TrialComponent,
+    FormTrialComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,10 @@ import { TrialComponent } from './Components/trial/trial.component';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    // MatRadioButton
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent],

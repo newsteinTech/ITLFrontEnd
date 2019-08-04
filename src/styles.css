@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+.fillSpace{
+    flex: 1 1 auto;
+}
+
+.normal-form{
+    margin: 10px
+}
+
+.controles-container{
+    width: 100%;
+    padding: 5%;
+}
+
+.controles-container > *{
+    width: 100%
+}
+
+mat-radio-group mat-radio-button {
+    margin-left: 5px;
+}

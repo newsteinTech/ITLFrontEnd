@@ -42,7 +42,7 @@
                             <label>Existing Group</label>
                             
                             <select multiple class="form-control" >
-                                <option *ngFor = "let gr of Group">{{gr}}</option>
+                                <option *ngFor = "let gr of Group" [(ngModel)] = Group>{{gr.Name}}</option>
                             </select>
                                    
                         </div>

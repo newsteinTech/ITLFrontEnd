@@ -25,6 +25,11 @@ export class EditUserComponent implements OnInit {
     this.userData = this.services.userData[0];
     console.log(this.userData.Group);
     this.Group = this.userData.Group;
+    this.services.getGroup().subscribe((data:any)=>{
+      console.log(data);
+    },(err:any)=>{
+      console.log(err);
+    })
     
     // this.Name = this.userData.Name;
     // console.log("Name: "+ this.Name);
@@ -38,6 +43,7 @@ export class EditUserComponent implements OnInit {
 
     console.log(userId);
     console.log(this.userData);
+    console.log(this.Group);
     this.services.editUser(this.userData).subscribe((data:any)=>{
       console.log(data.data);
       alert("User Updated.");
@@ -63,6 +69,10 @@ export class EditUserComponent implements OnInit {
       console.log(err);
     })
 
+  }
+
+  getgroup(group){
+    console.log(group);
   }
 
 }
