@@ -1,17 +1,17 @@
-<br><br><br>
+<!-- <br><br><br>
 <div class="container col-md-4 col-md-offset-6">
 <form >
   <table class="table table-bordered table-light">
-    <thead class="table-success">
+    <thead class="table-info">
       <th><div class="text-center"><h6><b>LOGIN</b></h6></div></th>
     </thead>
   <tr>
   <td>
   
     <div class="form-group">
-      <label for="inputEmail3" class="col-md-2 col-form-label"><b>Email</b></label><br>
+      <label  class="col-md-2 col-form-label"><b>UserId</b></label><br>
       <div class=" col-md-10 col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" name="Email" placeholder="Email" [(ngModel)]="userLoginRequest.Email">
+        <input type="text" class="form-control" name="UserId" placeholder="UserId" [(ngModel)]="userLoginRequest.UserId">
       </div>
     </div>
     <div class="form-group">
@@ -22,7 +22,7 @@
     </div>
     <div class="form-group row">
         <div class="col-md-12 col-sm-12">
-          <button type="submit" class="btn btn-success btn-lg btn-block" (click)="loginHandler()">Sign in</button>
+          <button type="submit" class="btn btn-info btn-block" (click)="loginHandler()">Sign in</button>
         </div>
     </div>
     </td>
@@ -30,3 +30,29 @@
 </table>
 </form>
 </div>    
+ -->
+
+
+ <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-status/512/avatar-default-icon.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="UserId" [(ngModel)]="userLoginRequest.UserId">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="userLoginRequest.Password">
+      <input type="submit" class="fadeIn fourth" value="Log In" (click)="loginHandler()">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>

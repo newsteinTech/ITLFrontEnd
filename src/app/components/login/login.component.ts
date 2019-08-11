@@ -25,7 +25,14 @@ export class LoginComponent implements OnInit {
     console.log(this.userLoginRequest);
     this._user.userLogin(this.userLoginRequest).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['userList'])
+    },
+    error=>{
+      console.log(error);
+    })
+
+    this._user.getUserByUserId(this.userLoginRequest).subscribe(res=>{
+      console.log(res);
+      this.router.navigate(['profile'])
     },
     error=>{
       console.log(error);

@@ -12,8 +12,8 @@
       </thead>
       <tbody  *ngFor="let item of displayData" >
         <tr *ngIf="item!=NULL">
-          <td  ><a routerlink='editUser' (click)="editUserHandler(item)">{{item.UserId}}</a></td>
-          <td  (click)="editUserHandler(item)">{{item.Name}}</td>
+          <td  class="edit" (click)="editUserHandler(item)"><u>{{item.UserId}}</u></td>
+          <td  class="edit" (click)="editUserHandler(item)">{{item.Name}}</td>
           <td  (click)="editUserHandler(item)">{{item.Email}}</td>
           <td  (click)="editUserHandler(item)">{{item.Role}}</td>
         </tr>
@@ -43,3 +43,4 @@
 </div>
 
 <br><br>
+

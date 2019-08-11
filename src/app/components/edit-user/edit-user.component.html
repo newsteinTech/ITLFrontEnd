@@ -1,5 +1,8 @@
 
 <br>
+<div class="card m-5">
+<h5 class="card-header text-center">Edit Existing User</h5>
+<div class="card-body">
 <div class="container col-md-6 col-md-offset-6">
 <form>
     <!-- <div class="text-center"><h5>EDIT USER</h5></div><br> -->
@@ -7,7 +10,7 @@
     
       <div class="form-group col-md-6">
         <label> UserId</label>
-        <input type="text" class="form-control" name="USERID" placeholder="UserId" disabled>
+        <input type="text" class="form-control" name="USERID"  [(ngModel)]="updatedData.UserId" value="updatedData.UserId" disabled>
       </div>
     
      
@@ -44,8 +47,12 @@
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
+        <label >Current Groups</label>
+        <textarea class="form-control" name="current groups" [(ngModel)]="currentGroups">{{currentGroups}}</textarea>
+      </div>
+      <div class="form-group col-md-6">
         <label >Group</label>
-        <select multiple class="form-control" [(ngModel)]="updatedData.Group" [ngModelOptions]="{standalone: true}">
+        <select multiple class="form-control" [(ngModel)]="updatedGroups" [ngModelOptions]="{standalone: true}">
           <option>Choose...</option>
           <option *ngFor="let item of groupData">{{item.GroupId}}</option>
         </select>
@@ -53,13 +60,16 @@
     </div>
     <div class="form-row">
      <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-success btn-lg btn-block" (click)="updateUserHandler()">Update User</button>
+    <button type="submit" class="btn btn-info" (click)="updateUserHandler()">Update User</button>
      </div>
      <div class="form-group col-md-6">
-    <button class="btn btn-success btn-lg btn-block" type="submit" (click)="deleteUserHandler(updatedData)">
+    <button class="btn btn-info" type="submit" (click)="deleteUserHandler(updatedData)">
       Delete User
     </button>
   </div>
   </div>
   </form>
   </div>
+  </div>
+  </div>
+  

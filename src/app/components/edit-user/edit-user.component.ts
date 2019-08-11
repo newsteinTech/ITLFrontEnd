@@ -14,6 +14,8 @@ export class EditUserComponent implements OnInit {
 
   public updatedData: User; 
   public groupData: Group[];
+  public currentGroups: string[]=[];
+  public updatedGroups: string[]=[];
   
   constructor(private _user: UserService, private _group: GroupService, private router: Router) { 
     this.updatedData = new User();
@@ -24,27 +26,40 @@ export class EditUserComponent implements OnInit {
     this.updatedData = this._user.userServiceData;
     console.log(this.updatedData);
 
-    this._group.getAllGroups().subscribe(res=>{
-      console.log(res);
-      this.groupData = res.data;
-    },
-    error=>{
-      console.log(error);
-    }) 
+    this.groupData = this._group.groupServiceData 
+    console.log(this.groupData)
+   
+    //to display current groupids
+    for(let i=0;i<this.updatedData.Group.length;i++){
+      this.currentGroups.push(this.updatedData.Group[i].GroupId)
+    }
 
   }
 
+
   public updateUserHandler(){
 
-  console.log(this.updatedData);
+    this.updatedData.Group=[];
+
+    //map groupid from frontend to object of the group and send the object in request
+    for(let i=0; i<this.updatedGroups.length; i++){
+      for(let j=0;j<this.groupData.length;j++){
+        if(this.updatedGroups[i]==this.groupData[j].GroupId){
+          this.updatedData.Group.push(this.groupData[j]);
+        }
+      }
+    } 
+
+    console.log(this.updatedData);
     this._user.editUser(this.updatedData).subscribe(res=>{
       console.log(res);
+      this.router.navigate(['userList'])
     },
     error=>{
       console.log(error);
     })
 
-    this.router.navigate(['userList'])
+   
   }
 
   public deleteUserHandler(user: any){
@@ -52,11 +67,12 @@ export class EditUserComponent implements OnInit {
     console.log(user);
     this._user.deleteUser(user).subscribe(res=>{
       console.log(res);
+      this.router.navigate(['userList']);
     },
     error=>{
       console.log(error);
     })
-    this.router.navigate(['userList']);
+    
     
   }
 

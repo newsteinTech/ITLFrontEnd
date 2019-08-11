@@ -1,0 +1,53 @@
+<br><br>
+<div class=" container col-lg-8 col-md-8 col-sm-8 col-md-offset-4 table-responsive">
+  <p class="text-center"><b>INCIDENT LIST</b></p>
+  <table matSort (matSortChange)="sortData($event)" class="table table-bordered table-hover table-sm">
+      <thead class="thead-light">
+        <tr>
+          <th mat-sort-header="IncidentNumber" scope="col">NUMBER</th>
+          <th mat-sort-header="Priority" scope="col">PRIORITY</th>
+          <th mat-sort-header="AssignmentGroup" scope="col">ASSIGNMENT GROUP</th>
+          <th mat-sort-header="AssignedTo" scope="col">ASSIGNED TO</th>
+          <th mat-sort-header="State" scope="col">STATE</th>
+          <th mat-sort-header="ShortDescription" scope="col">SHORT DESCRIPTION</th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let item of incidentData" >
+        <tr *ngIf="item!=NULL">
+          <td  class="edit" (click)="editIncidentHandler(item)"><u>{{item.IncidentNumber}}</u></td>
+          <td  >{{item.Priority}}</td>
+          <td  >{{item.AssignmentGroup.GroupId}}</td>
+          <td  >{{item.AssignedTo.Name}}</td>
+          <td  >{{item.State}}</td>
+          <td  >{{item.ShortDescription}}</td>
+        </tr>
+      </tbody>
+      </table>
+  </div>   
+  <br><br>
+
+  
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item" *ngIf="currentPage!=1"><a class="page-link" (click)="Paginate(currentPage-1)">Previous</a></li>
+      <div *ngFor = "let item of pageNum">
+      <li class="page-item" ><a class="page-link" (click)="Paginate(item)">{{item}}</a></li>
+      </div>
+      <li class="page-item" *ngIf="currentPage!=numOfPages"><a class="page-link" (click)="Paginate(currentPage+1)">Next</a></li>
+      
+    </ul>
+  </nav> 
+
+  <div class="container col-md-2 col-md-offset-6 text-center">
+      <div class="justify-content-center ">
+        <label>Page Size</label>
+          <select class="form-control" [(ngModel)]="pageSize" [ngModelOptions]="{standalone: true}" (click)=Paginate(currentPage)>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+      </div> 
+    </div>
+
+<br><br>
+

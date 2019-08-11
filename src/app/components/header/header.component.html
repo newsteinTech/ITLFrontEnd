@@ -3,7 +3,7 @@
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a href="#">Dashboard</a>
+    <a class="nav-link" routerLink='profile'>Profile</a>
     <a class="nav-link" routerLink='login'>Login <span class="sr-only"></span></a>
     <div class="dropdown">
       <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -14,6 +14,18 @@
         <a class="dropdown-item" routerLink='userList'>List</a>
       </div> 
     </div>
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Incident
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" routerLink='openIncident'>New</a>
+        <a class="dropdown-item" routerLink='incidentList'>List</a>
+        <a class="dropdown-item" routerLink='incidentByGroup'>Assigned To My Groups</a>
+        <a class="dropdown-item" routerLink='incidentByAssignedTo'>Assigned To Me</a>
+      </div> 
+    </div>
+    <a class="nav-link" routerLink='WelcomePage'>Logout <span class="sr-only"></span></a>
 </div>
   
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -1,0 +1,164 @@
+import { Component, OnInit } from '@angular/core';
+import { Incident } from 'src/app/models/incident';
+import { IncidentService } from 'src/app/services/incident.service';
+import { Router } from '@angular/router';
+import { GroupService } from 'src/app/services/group.service';
+import { Group } from 'src/app/models/group';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user';
+
+@Component({
+  selector: 'app-edit-incident',
+  templateUrl: './edit-incident.component.html',
+  styleUrls: ['./edit-incident.component.css']
+})
+export class EditIncidentComponent implements OnInit {
+
+  public updatedData: Incident;
+  public subcategory: string[];
+  public groupData: Group[];
+  public userData: User[];
+  public assignedToList: string[];
+
+  constructor(private _incident: IncidentService, private _group: GroupService, private _user: UserService, private router: Router) { 
+    this.assignedToList= [];
+  }
+
+  ngOnInit() {
+
+    this.updatedData = this._incident.incidentServiceData;
+    console.log(this.updatedData);
+    this.userData= this._user.userServiceList;
+    this.groupData= this._group.groupServiceData;
+
+    //to display assignedto when page loads
+    this.assignedToHandler(this.updatedData.AssignmentGroup.GroupId);
+    //to display subcategory when page loads
+    this.subcategoryHandler(this.updatedData.Category);
+
+  }
+
+  public updateIncidentHandler(){
+
+    //add user's Object in AssignedTo field
+    for(let i=0;i<this.userData.length;i++){
+      if(this.userData[i].Name==this.updatedData.AssignedTo.Name){
+         this.updatedData.AssignedTo= this.userData[i]
+      }
+    }
+
+    //send back caller's objectid instead of userid
+    for(let i=0;i<this.userData.length;i++){
+      if(this.userData[i].UserId.indexOf(this.updatedData.Caller)){
+        this.updatedData.Caller = this.userData[i]._id;
+      }
+    }
+
+    console.log(this.updatedData);
+    this._incident.editIncident(this.updatedData).subscribe(res=>{
+      console.log(res);
+      this.router.navigate(['incidentList'])
+    },
+    error=>{
+      console.log(error);
+    })
+  }
+
+  public onSubmit():any {
+    console.log("onsubmit")
+    return alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.updatedData, null, 4));
+  }
+
+  public assignedToHandler(groupid: string){
+  
+    this.assignedToList=[];
+
+    //add assignmentGroup's object in updatedData
+     for(let i=0;i<this.groupData.length;i++){
+      if(this.groupData[i].GroupId==groupid){
+        this.updatedData.AssignmentGroup= this.groupData[i]
+      }
+    } 
+
+    console.log(this.updatedData.AssignmentGroup);
+
+    //display groupmembers of the selected group
+    for(let i=0;i<this.userData.length;i++){
+      if(this.updatedData.AssignmentGroup.GroupMembers.indexOf(this.userData[i]._id)>=0){
+        this.assignedToList.push(this.userData[i].Name)
+      }
+    } 
+    
+  }
+
+  public subcategoryHandler(category: string){
+    this.subcategory=[];
+ 
+    console.log(category)
+    switch(category){
+
+      case 'Software':
+        this.subcategory.push('Email')
+        this.subcategory.push('Operating System')
+        break
+      case 'Hardware':
+        this.subcategory.push('CPU')
+        this.subcategory.push('Disk')
+        this.subcategory.push('Keyboard')
+        this.subcategory.push('Memory')
+        this.subcategory.push('Monitor')
+        this.subcategory.push('Mouse')
+        break
+      case 'Network':
+        this.subcategory.push('IP Address')
+        this.subcategory.push('DNS')  
+        this.subcategory.push('Wireless')
+        this.subcategory.push('VPN')
+        break
+      case 'Database':
+        this.subcategory.push('Oracle')
+        this.subcategory.push('SQL Server') 
+        this.subcategory.push('db2')
+        break 
+      case 'Inquiry/Help':
+        this.subcategory.push('Internal Application')
+        this.subcategory.push('Antivirus')  
+        break
+      default:
+        break
+    }
+
+    console.log(this.subcategory)
+   
+  }
+
+  public priorityHandler(impact: string, urgency: string){
+ 
+    console.log(impact)
+    console.log(urgency)
+
+    if(impact && urgency){
+
+    if(impact=='High' && urgency=='High'){
+      this.updatedData.Priority='Critical - 1'
+    }
+
+    if((impact=='High' && urgency=='Medium') || (urgency=='High' && impact=='Medium')){
+      this.updatedData.Priority='High - 2'
+    }
+
+    if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') ||
+    (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
+      this.updatedData.Priority='Medium - 3'
+    }
+
+    if(impact=='Low' && urgency=='Low'){
+      this.updatedData.Priority='Low - 4'
+    }
+   }
+
+    console.log(this.updatedData.Priority)
+
+  }
+
+}

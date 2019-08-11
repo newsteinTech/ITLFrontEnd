@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import {Sort} from '@angular/material/sort';
+import { GroupService } from 'src/app/services/group.service';
 
 
 
@@ -24,7 +25,7 @@ export class UserComponent implements OnInit {
   public pageNum: number[];
   public currentPage: number;
 
-  constructor(private _user: UserService, private router: Router) { 
+  constructor(private _user: UserService, private _group: GroupService, private router: Router) { 
     this.pagingStartIndex = 0;
     this.displayData =[];
     this.sortedData=[];
@@ -41,8 +42,14 @@ export class UserComponent implements OnInit {
       console.log(res);
       this.userData=res.data;
       this.sortedData= this.userData;
-      this._user.numberOfUsers= this.userData.length;
-      this.numberOfPages = this._user.numberOfUsers/this.pageSize;
+      this._user.numOfUsers = this.userData.length;
+
+      let mod : number = this._user.numOfUsers % this.pageSize
+      console.log(mod);
+      if(mod>0) this.numberOfPages = Math.floor(this._user.numOfUsers/this.pageSize) + 1;
+      else this.numberOfPages = (this._user.numOfUsers/this.pageSize) 
+
+      console.log(this.numberOfPages)
 
       for(let i=0; i<this.numberOfPages; i++){
         this.pageNum.push(i+1);
@@ -53,6 +60,15 @@ export class UserComponent implements OnInit {
     error=>{
        console.log(error);
     });
+
+    //get all groups
+    this._group.getAllGroups().subscribe(res=>{
+      console.log(res);
+      this._group.groupServiceData = res.data;
+    },
+    error=>{
+      console.log(error);
+    })
   }
 
 
@@ -63,26 +79,41 @@ export class UserComponent implements OnInit {
     this.router.navigate(['editUser']);
   }
 
-  public displayHandler(pageNum: number){
+  //for client side pagination
+  public displayHandler(pageNumber: number){
    
-    this.pagingStartIndex = this.pageSize * (pageNum-1);
-    this.pagingEndIndex = this.pagingStartIndex + this.pageSize - 1;
+    this.pagingStartIndex = this.pageSize * (pageNumber-1);
+    this.pagingEndIndex = Number.parseInt(this.pagingStartIndex.toString()) + Number.parseInt(this.pageSize.toString()) - 1;
+    //converted number to string then again to number by using parseint above, otherwise it was treating + as concatenation at some points instaed of addition
+    
     this.displayData= [];
     this.pageNum=[];
-    //update number of pages depending on page size chosen by user through front end, then accordingly update pageNum array
-    this.numberOfPages = this._user.numberOfUsers/this.pageSize;
+  
+    //update number of pages depending on page size chosen by user through front end, 
+    //then accordingly update pageNum array
+    let mod : number = this.userData.length % this.pageSize
+    console.log(mod);
+    if(mod>0) this.numberOfPages = Math.floor(this.userData.length/this.pageSize) + 1;
+    else this.numberOfPages = (this.userData.length/this.pageSize)
+
+    console.log("Numberofpages" + this.numberOfPages)
 
     for(let i=0; i<this.numberOfPages; i++){
       this.pageNum.push(i+1);
     }
 
-    //update data to be displayed based on above changes
-    for(let i=this.pagingStartIndex, j=0; i<=this.pagingEndIndex; i++, j++){
-     this.displayData[j]= this.sortedData[i]; 
-    }
+    console.log(this.pagingStartIndex)
+    console.log(this.pagingEndIndex)
 
+    //update the data to be displayed based on above changes
+    for(let i=this.pagingStartIndex; i<=this.pagingEndIndex; i++){
+      if(this.sortedData[i]!=null)
+      this.displayData.push(this.sortedData[i]); 
+    }
+    
     //update current page
-    this.currentPage= pageNum;
+    this.currentPage= pageNumber;
+    console.log(this.displayData)
   }
 
 

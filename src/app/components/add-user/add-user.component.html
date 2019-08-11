@@ -1,18 +1,22 @@
 <br>
+<div class="card m-5">
+<h5 class="card-header text-center">Add new User</h5>
+<div class="card-body">
 <div class="container col-md-7 col-md-offset-6">
-<form class="needs-validation" novalidate>
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
     <!-- <div class="text-center"><h6><b>ADD NEW USER</b></h6></div><br> -->
     <div class="form-row">
       <div class="form-group col-md-6">
         <label> <b>UserId</b></label>
-        <input type="text" class="form-control" name="USERID" placeholder="UserId" [(ngModel)]="userRequest.UserId">
+        <input type="text" class="form-control" name="USERID" [(ngModel)]="Userid" disabled>
       </div>
       <div class="form-group col-md-6">
         <label ><b>Name</b></label>
-        <input type="text" class="form-control" name="NAME" placeholder="Name" [(ngModel)]="userRequest.Name" required>
-      </div>
-      <div class="valid-feedback">
-          Looks good!
+        <input type="text" class="form-control" name="Name" placeholder="Name" [(ngModel)]="userRequest.Name"
+        #Name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Name.invalid }"  required>
+        <div *ngIf="f.submitted && Name.invalid" class="invalid-feedback">
+          <div *ngIf="Name.errors.required">Name is required</div>
+        </div>
       </div>
     </div>
     <div class="form-row">
@@ -20,18 +24,22 @@
         <label ><b>Email</b></label>
         <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input type="email" class="form-control" name="EMAIL" placeholder="Email" [(ngModel)]="userRequest.Email" required>
+        <input type="email" class="form-control" name="Email"  placeholder="Email" 
+        [ngClass]="{ 'is-invalid': f.submitted && Email.invalid }" [(ngModel)]="userRequest.Email" #Email="ngModel" required email>
+        <div *ngIf="f.submitted && Email.invalid" class="invalid-feedback">
+          <div *ngIf="Email.errors.required">Email is required</div>
+          <div *ngIf="Email.errors.email">Email must be a valid email address</div>
         </div>
-        <div class="invalid-feedback">
-            Please provide a valid email.
         </div>
       </div>
       <div class="form-group col-md-6">
         <label ><b>Password</b></label>
-        <input type="password" class="form-control" name="PASSWORD" placeholder="Password" [(ngModel)]="userRequest.Password" required>
-        <small id="passwordHelpBlock" class="form-text text-muted">
-            Your password must be 8-20 characters long, and should contain letters and numbers.
-        </small>
+        <input type="password" class="form-control"  name="Password" placeholder="Password"
+        [ngClass]="{ 'is-invalid': f.submitted && Password.invalid }" [(ngModel)]="userRequest.Password" #Password="ngModel" required minlength="6">
+        <div *ngIf="f.submitted && Password.invalid" class="invalid-feedback">
+          <div *ngIf="Password.errors.required">Password is required</div>
+          <div *ngIf="Password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
       </div>
     </div>
     <div class="form-row">
@@ -41,22 +49,27 @@
     </div>
     <div class="form-group col-md-6">
         <label ><b>Role</b></label>
-        <select class="form-control" [(ngModel)]="userRequest.Role" [ngModelOptions]="{standalone: true}" required>
+        <select class="form-control" name="Role" [(ngModel)]="userRequest.Role" #Role="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && Role.invalid }" required>
           <option selected>Choose...</option>
           <option>Admin</option>
           <option>ITIL Admin</option>
           <option>Manager</option>
           <option>CS Reps</option>
         </select>
+        <div *ngIf="f.submitted && Role.invalid" class="invalid-feedback">
+          <div *ngIf="Role.errors.required">Role is required</div>
+        </div>
     </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label ><b>Group</b></label>
-        <select multiple class="form-control" [(ngModel)]="userRequest.Group" [ngModelOptions]="{standalone: true}">
+        <select multiple class="form-control" name="Group" [(ngModel)]="groupSelected" 
+        [ngModelOptions]="{standalone: true}">
           <option>Choose...</option>
-          <option *ngFor="let item of groupData">{{item.GroupId}}</option>
-        </select>
+          <option *ngFor="let item of groupData" >{{item.GroupId}}</option>
+        </select> 
       </div>
       <div class="form-group">
             <div class="form-check">
@@ -68,8 +81,10 @@
           </div>
     </div>
     
-    <button type="submit" class="btn btn-success btn-lg btn-block" (click)="createUserHandler()">Submit</button>
+    <button type="submit" class="btn btn-info btn-block" [disabled]="f.invalid" (click)="createUserHandler()">Submit</button>
   </form>
+  </div>
+  </div>
   </div>
 <br><br>
     

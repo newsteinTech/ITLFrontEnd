@@ -10,6 +10,7 @@ export class GroupService {
 
   private headers: HttpHeaders;
   private host: string;
+  public groupServiceData: any;
 
   constructor(private httpClient: HttpClient) {
 
