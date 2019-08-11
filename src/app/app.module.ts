@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule, forwardRef } from '@angular/core';
+import { FormsModule, ReactiveFormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {APP_BASE_HREF} from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { TrialComponent } from './Components/trial/trial.component';
 import { MaterialModule } from './material/material.module';
 import { FormTrialComponent } from './form-trial/form-trial.component';
 import { MatRadioButton } from '@angular/material';
+import { IncidentListComponent } from './Components/incident-list/incident-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatRadioButton } from '@angular/material';
     CreateGroupsComponent,
     IncidentComponent,
     TrialComponent,
-    FormTrialComponent
+    FormTrialComponent,
+    IncidentListComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,15 @@ import { MatRadioButton } from '@angular/material';
     ReactiveFormsModule,
     // MatRadioButton
   ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+  providers: 
+  [
+    {provide: APP_BASE_HREF, useValue : '/' },
+    // { 
+    //   provide: NG_VALUE_ACCESSOR,
+    //   multi: true,
+    //   useExisting: forwardRef(()=>IncidentComponent),
+    // }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [TrialComponent]
 })

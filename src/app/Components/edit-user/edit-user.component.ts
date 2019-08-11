@@ -18,6 +18,7 @@ export class EditUserComponent implements OnInit {
   PhoneNo:string;
   UserId:string;
   Group:Array<any>;
+  existingGroups: Array<any>;
   Password:string;
   Role:string;
   constructor( private services:UsersService, private routes:Router) {
@@ -27,6 +28,8 @@ export class EditUserComponent implements OnInit {
     this.Group = this.userData.Group;
     this.services.getGroup().subscribe((data:any)=>{
       console.log(data);
+      this.existingGroups = data.data;
+      console.log(this.existingGroups);
     },(err:any)=>{
       console.log(err);
     })
@@ -42,7 +45,7 @@ export class EditUserComponent implements OnInit {
   editUser(userId){
 
     console.log(userId);
-    console.log(this.userData);
+    // console.log(this.userData);
     console.log(this.Group);
     this.services.editUser(this.userData).subscribe((data:any)=>{
       console.log(data.data);
@@ -73,6 +76,17 @@ export class EditUserComponent implements OnInit {
 
   getgroup(group){
     console.log(group);
+    let index = this.Group.indexOf(group);
+    this.Group.splice(index,1);
+    console.log(this.Group);
+  }
+  selectGroup(group){
+    
+    let index = this.Group.indexOf(group);
+    if(index == -1){
+      this.Group.push(group);
+    }
+  
   }
 
 }

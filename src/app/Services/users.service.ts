@@ -61,7 +61,7 @@ export class UsersService {
   }
 
   public getGroup():Observable<User>{
-    let url:string = "http://localhost:3000/api/groups/getAllGroups";
+    let url:string = "http://localhost:3000/api/group/getGroups";
     return this.httpClient.get<User>(url);
   }
 

@@ -1,0 +1,45 @@
+<div class="container">
+    <br>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <table class="table">
+        <thead class="thead-light">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Incident Number</th>
+            <th scope="col">Caller</th>
+            <th scope="col">State</th>
+            <th scope="col">Impact</th>
+            <th scope="col">Assignment Group</th>
+            <th scope="col">Assign To</th>
+            </tr>
+        </thead>
+        <tbody *ngFor = "let inc of incList; index as j">
+            <tr>
+            <th scope="row">{{j+1}}</th>
+            <td>INC-00{{inc.IncidentNumber}}</td>
+            <td>{{inc.Caller.Name}}</td>
+            <td>{{inc.State}}</td>
+            <td>{{inc.Impact}}</td>
+            <td>{{inc.AssignmentGroup.Name}}</td>
+            <div *ngIf = "inc.AssignedTo != null;">
+            <td>{{inc.AssignedTo.Name}}</td>
+            </div>
+            <div *ngIf = "inc.AssignedTo == null;">
+            <td></td>
+            </div>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination col-md-6">
+      <div *ngFor = "let val of value; index as j">
+      <li class="page-item"><a class="page-link" (click)="pagi(j)" name="name">{{j+1}}</a></li>
+      </div>
+    </ul>
+  </nav>
+</div>

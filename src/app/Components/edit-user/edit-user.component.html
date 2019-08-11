@@ -42,14 +42,14 @@
                             <label>Existing Group</label>
                             
                             <select multiple class="form-control" >
-                                <option *ngFor = "let gr of Group" [(ngModel)] = Group>{{gr.Name}}</option>
+                                <option *ngFor = "let gr of Group" [(ngModel)] = Group  name="{{gr.Name}}" (click) = "getgroup(gr)">{{gr.Name}}</option>
                             </select>
                                    
                         </div>
                         <div class="col-lg-6">
                             <label>Select Group</label>
-                            <select multiple class="form-control">
-                                <option>Choose Groups</option>
+                            <select multiple class="form-control" *ngIf = "existingGroups != null" >
+                                <option *ngFor = "let gr of existingGroups" [(ngModel)] = existingGroups  name="{{gr.Name}}" (click) = "selectGroup(gr)">{{gr.Name}}</option>
                             </select>
                         </div>
                     </div>

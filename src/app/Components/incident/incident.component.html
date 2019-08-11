@@ -6,11 +6,11 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="">Incident Number</label>
-                        <input type="text" class="form-control" name="number">
+                        <input type="text" class="form-control" name="number" value="{{incNum}}" readonly>
                     </div>
                     <div class="col-lg-5" id="caller">
                         <label for="">Caller</label>
-                        <input type="text" class="form-control" name="caller" [(ngModel)] = userId>
+                        <input type="text" class="form-control" name="caller" [(ngModel)] = userId.Name>
                     </div>
                     <div class="col-lg-1" id="icon">
                         <button type="button" class="btn btn-primary btn-sm" (click) = getUsers()>
@@ -19,11 +19,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <label for="">On Behalf Of</label>
-                        <input type="text" class="form-control" name="OnBehalfOf">
+                    <!-- <div class="col-lg-1" id="icon">
+                        <button type="button" class="btn btn-primary btn-sm" (click) = getUsers()>
+                            <span class="glyphicon glyphicon-user">CLICK</span>  
+                        </button>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-5" id="onBehalfOf">
+                        <label for="">Caller</label>
+                        <input type="text" class="form-control" name="onBehalfOf" [(ngModel)] = userId>
+                    </div> -->
+                    
+                    <div class="col-lg-12">
                         <label for="">Configration item</label>
                         <input type="text" class="form-control" name="ci">
                     </div>
@@ -31,7 +37,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="">Impact</label>
-                        <select class = "form-control">
+                        <select class = "form-control" name="impact" [(ngModel)] = createInc.Impact (change) = "setPriority()" >
                             <option>High</option>
                             <option>Medium</option>
                             <option>Low</option>
@@ -39,34 +45,53 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="">State</label>
-                        <input type="text" class="form-control" name="state">
+                        <select class = "form-control" name="state" [(ngModel)] = createInc.State>
+                            <option>New</option>
+                            <option>In Progress</option>
+                            <option>Resolved</option>
+                            <option>Closed</option>
+                            <option>Cancelled</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="">Urgency</label>
-                        <input type="text" class="form-control" name="urgency">
+                        <select class = "form-control" name="urgency" [ngModelOptions]="{standalone: true}" [(ngModel)] = createInc.Urgency (change) = "setPriority()"> 
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
                     </div>
                     <div class="col-lg-6">
                         <label for="">Assignment Group</label>
-                        <input type="text" class="form-control" name="ag">
+                        <select class = "form-control" name="ag" (change) = "getUsersInGroups($event)">
+                            <option>Select Group</option> 
+                            <option *ngFor = "let gr of grpData">{{gr.Name}}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="">Priority</label>
-                        <input type="text" class="form-control" name="priority" readonly>
+                        <input type="text" class="form-control" name="priority" [(ngModel)] = "priority" readonly>
                     </div>
                     <div class="col-lg-6">
                         <label for="">Assignment To</label>
-                        <input type="text" class="form-control" name="agt">
+                        <select class = "form-control" name="agt" [(ngModel)] = grpMemFrmHtml>
+                            <option>---</option>
+                            <option *ngFor = "let grm of groupMembers">{{grm.Name}}</option>
+                        </select>
                     </div>
                 </div>
                 <label>Short Description</label>
-                <input type="text" class="form-control" name="sdes">
+                <input type="text" class="form-control" name="shortDescription" [(ngModel)] = createInc.ShortDescription>
                 <label>Description</label>
-                <textarea class="form-control" rows="2"></textarea>
+                <textarea class="form-control" rows="2" name="description" [(ngModel)] = createInc.Description></textarea>
+                <br>
+                <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block" (click) = "onSubmit()">
             </form>
+            
         </div>
         <div class="col-lg-3"></div>
     </div>

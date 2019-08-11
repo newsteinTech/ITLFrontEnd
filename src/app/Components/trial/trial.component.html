@@ -16,7 +16,7 @@
               <tr *ngIf = "i<5">
                 <th scope="row">{{i+1}}</th>
                 <td>{{data.Name}}</td>
-                <td class="editUser" (click)= onButtonClick(data.UserId)>{{data.UserId}}</td>
+                <td class="editUser" (click)= onButtonClick(data)>{{data.UserId}}</td>
                 <td>{{data.Email}}</td>
               </tr>
             </tbody>
