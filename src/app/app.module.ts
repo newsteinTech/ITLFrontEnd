@@ -20,6 +20,8 @@ import { MaterialModule } from './material/material.module';
 import { FormTrialComponent } from './form-trial/form-trial.component';
 import { MatRadioButton } from '@angular/material';
 import { IncidentListComponent } from './Components/incident-list/incident-list.component';
+import { EditIncidentComponent } from './Components/edit-incident/edit-incident.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { IncidentListComponent } from './Components/incident-list/incident-list.
     IncidentComponent,
     TrialComponent,
     FormTrialComponent,
-    IncidentListComponent
+    IncidentListComponent,
+    EditIncidentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

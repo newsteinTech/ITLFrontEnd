@@ -6,6 +6,8 @@ import { CreateUserComponent } from './Components/create-user/create-user.compon
 import { IncidentComponent } from './Components/incident/incident.component';
 import { FormTrialComponent } from './form-trial/form-trial.component';
 import { IncidentListComponent } from './Components/incident-list/incident-list.component';
+import { EditIncidentComponent } from './Components/edit-incident/edit-incident.component';
+import { LoginComponent } from './Components/login/login.component';
 
 const routes: Routes = [
   {path:"users",component:UsersComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:"createUser",component:CreateUserComponent},
   {path:"incident",component:IncidentComponent},
   {path:"trialForm",component:FormTrialComponent},
-  {path:"incidentList",component:IncidentListComponent}
+  {path:"incidentList",component:IncidentListComponent},
+  {path:"editIncident",component:EditIncidentComponent},
+  {path:"login",component:LoginComponent}
 ];
 
 @NgModule({

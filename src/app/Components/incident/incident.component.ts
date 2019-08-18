@@ -24,6 +24,7 @@ export class IncidentComponent implements OnInit {
   incNum;
   impact;
   priority;
+  ci;
 
   constructor( 
     private dialog:MatDialog,
@@ -69,26 +70,21 @@ export class IncidentComponent implements OnInit {
         this.createInc.IncidentNumber = 1;
 
       }
-     
-      // let str:string = this.incNum[0].IncidentNumber;
-      // let arr = str.split("-")
-      // let arr2 = arr[1].split("");
-      // console.log(arr2);
-      // if(arr2[1] == "0"){
-         
-      //   let nm = Number.parseInt(arr2[2]);
-      //   this.incNum = "INC-00"+(nm+1);
-        
-      // }else{
-
-      //   console.log(arr2);
-
-      // }
-      // this.createInc.IncidentNumber = this.incNum;
 
     },(err)=>{
       console.log(err);
     });
+
+    this.service.getCI().subscribe((data:any)=>{
+
+      console.log(data);
+      this.ci = data.data;
+
+    },(err:any)=>{
+
+      console.log(err);
+
+    })
 
   }
 
@@ -159,7 +155,8 @@ export class IncidentComponent implements OnInit {
     this.service.createIncident(this.createInc).subscribe((data:any)=>{
 
       console.log(data);
-      // window.location.reload();
+      window.location.reload();
+      
     },(err:any)=>{
 
       console.log(err);
@@ -187,6 +184,28 @@ export class IncidentComponent implements OnInit {
         
       });
     }
+  }
+
+  setCi(event){
+
+    let value = event.target.value;
+
+    if(value != "Select..."){
+
+      console.log(value);
+
+      this.ci.forEach(cur =>{
+
+        if(cur.Name == value){
+
+          this.createInc.ConfigurationItem = cur._id;
+          
+        }
+
+      })
+
+    }
+
   }
 
 }

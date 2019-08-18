@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody *ngFor = "let inc of incList; index as j">
-            <tr>
+            <tr (click) = "editIncident(inc.IncidentNumber)" id="list">
             <th scope="row">{{j+1}}</th>
             <td>INC-00{{inc.IncidentNumber}}</td>
             <td>{{inc.Caller.Name}}</td>
