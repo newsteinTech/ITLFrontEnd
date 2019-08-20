@@ -18,6 +18,7 @@ export class Incident {
     public Description: string;
     public ConfigurationItem: string;
     public SLA: Date;
+    public remTime: number;
     public CreatedDate: Date;
     public UpdatedDate: Date;
 }

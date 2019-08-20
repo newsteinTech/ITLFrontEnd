@@ -30,28 +30,32 @@ export class IncidentListComponent implements OnInit {
     this.incidentData=[];
    }
 
+
+
   ngOnInit() {
 
     this._incident.getAllIncidents().subscribe(res=>{
       console.log(res);
       this._incident.numOfIncidents= res.data.length 
+      this._incident.timeString=[];
+      this._incident.days=[];
+      this._incident.hours=[];
+      this._incident.minute=[];
+      this._incident.seconds=[];
       //display first 5 records from service when the page loads initially
       for(let i=0;i<this.pageSize;i++){
         this.incidentData[i]= res.data[i];
       }
+      this.startTimer(this.incidentData);
 
+      // calculate number of pages acc. to pageSize
       let mod : number = this._incident.numOfIncidents % this.pageSize
-      console.log(mod);
       if(mod>0) this.numOfPages = Math.floor(this._incident.numOfIncidents/this.pageSize) + 1;
       else this.numOfPages = (this._incident.numOfIncidents/this.pageSize) 
-
-      console.log(this.numOfPages)
 
       for(let i=0;i<this.numOfPages;i++){
         this.pageNum.push(i+1)
       }
-      console.log(this.pageNum);
-
     },
     error=>{
       console.log(error);
@@ -76,13 +80,15 @@ export class IncidentListComponent implements OnInit {
     
   }
 
+
+
   public editIncidentHandler(item: any){
   
     console.log(item);
 
     //send caller's userid instead of objectid
     for(let i=0;i<this.userData.length;i++){
-      if(this.userData[i]._id.indexOf(item.Caller)){
+      if(this.userData[i]._id==item.Caller){
         item.Caller = this.userData[i].UserId;
       }
     }
@@ -91,6 +97,8 @@ export class IncidentListComponent implements OnInit {
     this._incident.incidentServiceData= item;
     this.router.navigate(['editIncident']);
   }
+
+
 
   //for server-side pagination
   private Paginate(num: number){
@@ -102,12 +110,9 @@ export class IncidentListComponent implements OnInit {
     if(mod>0) this.numOfPages = Math.floor(this._incident.numOfIncidents/this.pageSize) + 1;
     else this.numOfPages = (this._incident.numOfIncidents/this.pageSize) 
 
-    console.log(this.numOfPages)
-
     for(let i=0;i<this.numOfPages;i++){
       this.pageNum.push(i+1)
     }
-    console.log(this.pageNum);
     
     this.page = new Pagination(num, this.pageSize);
     this.currentPage= num;
@@ -115,11 +120,48 @@ export class IncidentListComponent implements OnInit {
     this._incident.getIncidentsPagination(this.page).subscribe((res:any)=>{
       console.log(res);
       this.incidentData = res.data;
+      this._incident.timeString=[];
+      this._incident.days=[];
+      this._incident.hours=[];
+      this._incident.minute=[];
+      this._incident.seconds=[];
+      this.startTimer(this.incidentData);
 
     },
     (error:any)=>{
         console.log(error);
     })
+
+  }
+
+
+
+  private startTimer(data: any) {
+    
+    if(this._incident.interval){
+      clearInterval(this._incident.interval);
+    }
+    
+    this._incident.interval = setInterval(() => {
+    
+    for(let i=0; i<data.length;i++){
+
+      let sla = new Date(data[i].SLA).getTime(); // getTime method returns the number of milliseconds since 1970/01/01:
+      let currentTime= new Date().getTime();
+      this._incident.timeLeft= Math.floor((sla - currentTime)/1000);// timeLeft is in seconds
+      //console.log(this._incident.timeLeft)
+      if(this._incident.timeLeft > 0) {
+        this._incident.timeLeft--;
+        this._incident.days[i]= Math.floor(this._incident.timeLeft/(60 * 60 * 24));
+        this._incident.hours[i]= Math.floor((this._incident.timeLeft % 86400) / 3600);
+        this._incident.minute[i]= Math.floor((this._incident.timeLeft % 3600) / 60);
+        this._incident.seconds[i]= this._incident.timeLeft % 60;
+        this._incident.timeString[i]= this._incident.days[i] + ' days ' + this._incident.hours[i] + ' hours ' 
+         + this._incident.minute[i] + ' minutes ' + this._incident.seconds[i] + ' seconds'
+      } 
+    }
+    },1000)
+  
   }
 
 }

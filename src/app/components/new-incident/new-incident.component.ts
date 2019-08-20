@@ -163,23 +163,36 @@ export class NewIncidentComponent implements OnInit {
 
     if(impact=='High' && urgency=='High'){
       this.incidentRequest.Priority='Critical - 1'
+      let date = new Date();
+      date.setDate(date.getDate() + 2)
+      this.incidentRequest.SLA = date;
     }
 
     if((impact=='High' && urgency=='Medium') || (urgency=='High' && impact=='Medium')){
       this.incidentRequest.Priority='High - 2'
+      let date = new Date();
+      date.setDate(date.getDate() + 3)
+      this.incidentRequest.SLA = date;
     }
 
     if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') ||
     (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
       this.incidentRequest.Priority='Medium - 3'
+      let date = new Date();
+      date.setDate(date.getDate() + 7)
+      this.incidentRequest.SLA = date;
     }
 
     if(impact=='Low' && urgency=='Low'){
       this.incidentRequest.Priority='Low - 4'
+      let date = new Date();
+      date.setDate(date.getDate() + 20)
+      this.incidentRequest.SLA = date;
     }
    }
 
     console.log(this.incidentRequest.Priority)
+    console.log(this.incidentRequest.SLA)
 
   }
 

@@ -14,6 +14,13 @@ export class IncidentService {
   private host: string;
   public incidentServiceData: Incident;
   public numOfIncidents: number;
+  public interval: any=0;
+  public timeLeft: number;
+  public days: number[]=[];
+  public hours: number[]=[];
+  public minute: number[]=[];
+  public seconds: number[]=[];
+  public timeString: string[]=[];
   
   constructor(private httpClient: HttpClient) {
 
@@ -54,9 +61,9 @@ export class IncidentService {
     return this.httpClient.put<ApiResponse>(url, data, {headers:this.headers});
   }
    
-  public getIncidentByGroup():Observable<ApiResponse>{
+  public getIncidentCountByGroup():Observable<ApiResponse>{
 
-    let url: string = this.host + "incident/getIncidentByGroup"
+    let url: string = this.host + "incident/getIncidentCountByGroup"
 
     return this.httpClient.get<ApiResponse>(url, {headers:this.headers});
   }

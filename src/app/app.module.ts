@@ -22,10 +22,11 @@ import { ReactiveFormValidationComponent } from './components/reactive-form-vali
 import { TemplateDrivenFormValidationComponent } from './components/template-deriven-form-validation/template-deriven-form-validation.component';
 import { EditIncidentComponent } from './components/edit-incident/edit-incident.component';
 import { UserListPopupComponent } from './components/user-list-popup/user-list-popup.component';
-import { IncidentByGroupComponent } from './components/incident-by-group/incident-by-group.component';
 import { IncidentByAssignedToComponent } from './components/incident-by-assigned-to/incident-by-assigned-to.component';
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ChartsModule } from "ng2-charts";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +42,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     TemplateDrivenFormValidationComponent,
     EditIncidentComponent,
     UserListPopupComponent,
-    IncidentByGroupComponent,
     IncidentByAssignedToComponent,
     WelcomePageComponent,
-    ProfileComponent
+    ProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +57,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

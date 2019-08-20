@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { User } from '../models/user';
 import { UserLogin } from '../models/user-login';
 import { Pagination } from '../models/pagination';
@@ -85,5 +85,35 @@ export class UserService {
     let url:string = this.host + "paginate";
 
     return this.httpClient.post<User>(url,req,{headers:this.headers});
+  }
+
+
+  getSales() {
+    return of({
+      "year1": {
+        "volumeSales": "0.09",
+        "valueSales": "1.23"
+      },
+      "year2": {
+        "volumeSales": "0.11",
+        "valueSales": "1.56"
+      },
+      "year3": {
+        "volumeSales": "0.12",
+        "valueSales": "1.69"
+      },
+      "year4": {
+        "volumeSales": "0.12",
+        "valueSales": "1.64"
+      },
+      "year5": {
+        "volumeSales": "0.10",
+        "valueSales": "1.41"
+      },
+      "total": {
+        "volumeSales": "0.55",
+        "valueSales": "7.53"
+      }
+    });
   }
 }

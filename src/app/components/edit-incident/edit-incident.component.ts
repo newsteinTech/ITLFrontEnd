@@ -19,6 +19,11 @@ export class EditIncidentComponent implements OnInit {
   public groupData: Group[];
   public userData: User[];
   public assignedToList: string[];
+  public days: number;
+  public hours: number;
+  public minute: number;
+  public seconds: number;
+  public remainingSLA: string;
 
   constructor(private _incident: IncidentService, private _group: GroupService, private _user: UserService, private router: Router) { 
     this.assignedToList= [];
@@ -28,6 +33,8 @@ export class EditIncidentComponent implements OnInit {
 
     this.updatedData = this._incident.incidentServiceData;
     console.log(this.updatedData);
+    this.updatedData.remTime = (new Date(this.updatedData.SLA).getTime() - new Date().getTime())/1000;
+    this.startTimer(this.updatedData.remTime);
     this.userData= this._user.userServiceList;
     this.groupData= this._group.groupServiceData;
 
@@ -49,7 +56,7 @@ export class EditIncidentComponent implements OnInit {
 
     //send back caller's objectid instead of userid
     for(let i=0;i<this.userData.length;i++){
-      if(this.userData[i].UserId.indexOf(this.updatedData.Caller)){
+      if(this.userData[i].UserId==this.updatedData.Caller){
         this.updatedData.Caller = this.userData[i]._id;
       }
     }
@@ -64,10 +71,12 @@ export class EditIncidentComponent implements OnInit {
     })
   }
 
+
   public onSubmit():any {
     console.log("onsubmit")
     return alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.updatedData, null, 4));
   }
+
 
   public assignedToHandler(groupid: string){
   
@@ -132,6 +141,7 @@ export class EditIncidentComponent implements OnInit {
    
   }
 
+
   public priorityHandler(impact: string, urgency: string){
  
     console.log(impact)
@@ -141,24 +151,53 @@ export class EditIncidentComponent implements OnInit {
 
     if(impact=='High' && urgency=='High'){
       this.updatedData.Priority='Critical - 1'
+      let date = new Date();
+      date.setDate(date.getDate() + 2)
+      this.updatedData.SLA = date;
     }
 
     if((impact=='High' && urgency=='Medium') || (urgency=='High' && impact=='Medium')){
       this.updatedData.Priority='High - 2'
+      let date = new Date();
+      date.setDate(date.getDate() + 3)
+      this.updatedData.SLA = date;
     }
 
     if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') ||
     (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
       this.updatedData.Priority='Medium - 3'
+      let date = new Date();
+      date.setDate(date.getDate() + 7)
+      this.updatedData.SLA = date;
     }
 
     if(impact=='Low' && urgency=='Low'){
       this.updatedData.Priority='Low - 4'
+      let date = new Date();
+      date.setDate(date.getDate() + 20)
+      this.updatedData.SLA = date;
     }
    }
 
-    console.log(this.updatedData.Priority)
-
   }
+
+
+  private startTimer(remainingTime: number) {
+
+    if(this._incident.interval){
+      clearInterval(this._incident.interval);
+    }
+    this._incident.timeLeft= Math.floor(remainingTime);// remainingTime is in seconds, so is timeLeft
+    console.log(this._incident.timeLeft)
+    this._incident.interval = setInterval(() => {
+      if(this._incident.timeLeft > 0) {
+        this._incident.timeLeft--;
+        this.days= Math.floor(this._incident.timeLeft/(60 * 60 * 24));
+        this.hours= Math.floor((this._incident.timeLeft % 86400) / 3600);
+        this.minute= Math.floor((this._incident.timeLeft % 3600) / 60);
+        this.seconds= this._incident.timeLeft % 60;
+      } 
+    },1000)
+  } 
 
 }

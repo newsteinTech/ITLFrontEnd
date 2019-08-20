@@ -11,18 +11,18 @@ import { TemplateDrivenFormValidationComponent } from './components/template-der
 import { EditIncidentComponent } from './components/edit-incident/edit-incident.component';
 import { UserListPopupComponent } from './components/user-list-popup/user-list-popup.component';
 import { IncidentByAssignedToComponent } from './components/incident-by-assigned-to/incident-by-assigned-to.component';
-import { IncidentByGroupComponent } from './components/incident-by-group/incident-by-group.component';
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'profile', component: ProfileComponent},
+  {path:'dashboard', component: DashboardComponent},
   {path:'userList', component: UserComponent},
   {path:'addUser', component: AddUserComponent},
   {path:'editUser', component: EditUserComponent},
   {path:'login', component: LoginComponent},
   {path:'incidentList', component: IncidentListComponent},
-  {path:'incidentByGroup', component: IncidentByGroupComponent},
   {path:'incidentByAssignedTo', component: IncidentByAssignedToComponent},
   {path:'openIncident', component: NewIncidentComponent},
   {path:'userListPopup', component: UserListPopupComponent},

@@ -1,8 +1,8 @@
 <br><br>
 <div class=" container col-lg-8 col-md-8 col-sm-8 col-md-offset-4 table-responsive">
-  <p class="text-center"><b>INCIDENT LIST</b></p>
-  <table matSort (matSortChange)="sortData($event)" class="table table-bordered table-hover table-sm">
-      <thead class="thead-light">
+  <h5 class="text-center">INCIDENT LIST</h5>
+  <table matSort (matSortChange)="sortData($event)" class="table table-hover table-bordered table-sm">
+      <thead class="thead-dark">
         <tr>
           <th mat-sort-header="IncidentNumber" scope="col">NUMBER</th>
           <th mat-sort-header="Priority" scope="col">PRIORITY</th>
@@ -10,9 +10,10 @@
           <th mat-sort-header="AssignedTo" scope="col">ASSIGNED TO</th>
           <th mat-sort-header="State" scope="col">STATE</th>
           <th mat-sort-header="ShortDescription" scope="col">SHORT DESCRIPTION</th>
+          <th mat-sort-header="SLA" scope="col">SLA REMAINING</th>
         </tr>
       </thead>
-      <tbody  *ngFor="let item of incidentData" >
+      <tbody  *ngFor="let item of incidentData; index as i" >
         <tr *ngIf="item!=NULL">
           <td  class="edit" (click)="editIncidentHandler(item)"><u>{{item.IncidentNumber}}</u></td>
           <td  >{{item.Priority}}</td>
@@ -20,6 +21,7 @@
           <td  >{{item.AssignedTo.Name}}</td>
           <td  >{{item.State}}</td>
           <td  >{{item.ShortDescription}}</td>
+          <td  >{{_incident.timeString[i]}}</td>
         </tr>
       </tbody>
       </table>
@@ -28,11 +30,9 @@
 
   
   <nav>
-    <ul class="pagination justify-content-center">
+    <ul class="pagination edit justify-content-center">
       <li class="page-item" *ngIf="currentPage!=1"><a class="page-link" (click)="Paginate(currentPage-1)">Previous</a></li>
-      <div *ngFor = "let item of pageNum">
-      <li class="page-item" ><a class="page-link" (click)="Paginate(item)">{{item}}</a></li>
-      </div>
+      <li class="page-item" *ngFor = "let item of pageNum" ><a class="page-link" (click)="Paginate(item)">{{item}}</a></li>
       <li class="page-item" *ngIf="currentPage!=numOfPages"><a class="page-link" (click)="Paginate(currentPage+1)">Next</a></li>
       
     </ul>

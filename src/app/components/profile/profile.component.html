@@ -1,1 +1,77 @@
-<p>profile works!</p>
+
+<br>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-9 align-self-center">
+<div class="card m-3">
+<h5 class="card-header bg-dark text-center" style="color: #f1f1f1">Update Profile</h5>
+<div class="card-body">
+<div class="container col-md-10 col-md-offset-2">
+<form>
+    <!-- <div class="text-center"><h5>EDIT USER</h5></div><br> -->
+    <div class="form-row">
+    
+      <div class="form-group col-md-6">
+        <label> <b>UserId</b></label>
+        <input type="text" class="form-control" name="USERID"  [(ngModel)]="updatedData.UserId" value="updatedData.UserId" disabled>
+      </div>
+    
+     
+      <div class="form-group col-md-6">
+        <label ><b>Name</b></label>
+        <input type="text" class="form-control" name="NAME" placeholder="Name" [(ngModel)]="updatedData.Name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label ><b>Email</b></label>
+        <input type="email" class="form-control" name="EMAIL" placeholder="Email" [(ngModel)]="updatedData.Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label ><b>Password</b></label>
+        <input type="password" class="form-control" name="PASSWORD" placeholder="Password" >
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label ><b>Phone No.</b></label>
+      <input type="text" class="form-control" placeholder="Phone No." [(ngModel)]="updatedData.PhoneNo" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group col-md-6">
+        <label ><b>Role</b></label>
+        <select class="form-control" [(ngModel)]="updatedData.Role" [ngModelOptions]="{standalone: true}" disabled>
+          <option selected>Choose...</option>
+          <option>Admin</option>
+          <option>ITIL Admin</option>
+          <option>Manager</option>
+          <option>CS Reps</option>
+        </select>
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label ><b>Current Groups</b></label>
+        <textarea class="form-control" name="current groups" [(ngModel)]="currentGroups">{{currentGroups}}</textarea>
+      </div>
+      <div class="form-group col-md-6">
+        <label ><b>Group</b></label>
+        <select multiple class="form-control" [(ngModel)]="updatedGroups" [ngModelOptions]="{standalone: true}">
+          <option>Choose...</option>
+          <option *ngFor="let item of groupData">{{item.GroupId}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+       <button type="submit" class="btn btn-danger btn-block" (click)="updateUserHandler()">Update</button>
+      </div>
+      <div class="col-md-3"></div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <br><br> 

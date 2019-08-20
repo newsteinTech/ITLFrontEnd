@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     this._user.getUserByUserId(this.userLoginRequest).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['profile'])
+      this.router.navigate(['dashboard'])
     },
     error=>{
       console.log(error);

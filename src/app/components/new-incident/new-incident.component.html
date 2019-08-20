@@ -1,7 +1,10 @@
 
 <br>
-<div class="card m-5">
-<h5 class="card-header text-center">Open New Incident</h5>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-9 align-self-center">
+<div class="card m-3">
+<h5 class="card-header bg-dark text-center" style="color: #f1f1f1">Open New Incident</h5>
 <div class="card-body">
 <div class="container col-md-10 col-md-offset-2">
 <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
@@ -17,7 +20,7 @@
         <input type="text" class="form-control" name="Caller" placeholder="Caller" [(ngModel)]="userId" 
         #Caller="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Caller.invalid , 'has-success': f.submitted && Caller.valid }" required>
            <div class="input-group-append">
-           <button type="submit" class="btn btn-info" mat-raised-button (click)="openDialog()">Select</button>
+           <button type="submit" class="btn btn-danger" mat-raised-button (click)="openDialog()">Select</button>
            </div>
         <div *ngIf="f.submitted && Caller.invalid" class="invalid-feedback">
             <div *ngIf="Caller.errors.required">Caller is required</div>
@@ -81,12 +84,9 @@
             <input type="text" class="form-control" name="Priority" value="incidentRequest.Priority" [(ngModel)]="incidentRequest.Priority" disabled>      
         </div>
         <div class="form-group col-md-6">
-            <label ><b>On Behalf Of</b></label>
+            <label ><b>SLA</b></label>
             <div class="input-group">
-            <input type="text" class="form-control" name="OnBehalfOf" [(ngModel)]="incidentRequest.OnBehalfOf">      
-            <div class="input-group-append">
-                <a class="btn btn-info" href="http://localhost:4200/userList" target="_blank">Select</a>  
-            </div>
+            <input type="text" class="form-control" name="SLA" [(ngModel)]="incidentRequest.SLA" disabled>      
             </div>
         </div>
     </div>
@@ -138,45 +138,19 @@
             <label ><b>Description</b></label>
             <textarea class="form-control" rows="5" name="Description" [(ngModel)]="incidentRequest.Description"></textarea>     
         </div>
-
-            <button type="submit" class="btn btn-info" (click)="createIncidentHandler()">Submit</button>
+        <div class="row">
+           <div class="col-md-3"></div>
+           <div class="form-actions col-md-6" style="text-align:center">
+            <button type="submit" class="btn btn-danger btn-block" (click)="createIncidentHandler()">Submit</button>
+           </div>
+           <div class="col-md-3"></div>
+        </div>
         </form>
   </div>
   </div>
-  <div class="card m-5">
-      <div class="card-header">
-          Resolution Details
-      </div>
-      <div class="card-body">
-        <div class="form-group">
-            <label ><b>Work Notes</b></label>
-            <textarea class="form-control" rows="2" name="WorkNotes" ></textarea>     
-            <label ><b>Commented by</b></label>
-            <select class="form-control" >
-              <option selected>--None--</option>
-              <option *ngFor="let item of userData">{{item.Name}}</option>
-            </select>
-        </div>
-        <div class="form-group col-md-8">
-            <label ><b>Resolution Code</b></label>
-            <select class="form-control" >
-              <option selected>--None--</option>
-              <option >Solved by workaround</option>
-              <option >Solved Permanently</option>
-              <option >Not Solved</option>
-              <option >Closed</option>
-            </select>
-        </div>
-        <div class="form-group col-md-8">
-            <label ><b>Resolved by</b></label>
-            <select class="form-control" >
-              <option selected>--None--</option>
-              <option *ngFor="let item of userData">{{item.Name}}</option>
-            </select>
-        </div>
-      </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
 <br><br>
     
  

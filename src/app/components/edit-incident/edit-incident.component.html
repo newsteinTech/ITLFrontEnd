@@ -1,7 +1,8 @@
-
-<br>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-9 align-self-center">
 <div class="card m-5">
-<h5 class="card-header text-center">Edit Incident</h5>
+<div class="card-header text-center bg-dark" style="color: #f1f1f1">Edit Incident</div>
 <div class="card-body">
 <div class="container col-md-10 col-md-offset-2">
 <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
@@ -66,15 +67,20 @@
             <input type="text" class="form-control" name="Priority" [(ngModel)]="updatedData.Priority" disabled>      
         </div>
         <div class="form-group col-md-6">
-            <label ><b>On Behalf Of</b></label>
+            <label ><b>SLA</b></label>
             <div class="input-group">
-            <input type="text" class="form-control" name="OnBehalfOf" [(ngModel)]="updatedData.OnBehalfOf">      
-            <div class="input-group-append">
-                <a class="btn btn-info" href="http://localhost:4200/userList" target="_blank">Select</a>  
-            </div>
+            <input type="text" class="form-control" name="SLA" [(ngModel)]="updatedData.SLA" disabled> 
             </div>
         </div>
     </div>
+    <br>
+    <div class="form-row">
+      <div class="form-group col-md-10">
+      <label ><b>Time Remaining</b></label>
+      {{days}} days {{hours}} hours {{minute}} minutes {{seconds}} seconds
+      </div>
+    </div>
+    <br>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label ><b>Assignment Group*</b></label>
@@ -119,26 +125,37 @@
             <label ><b>Description</b></label>
             <textarea class="form-control" rows="5" name="Description" [(ngModel)]="updatedData.Description"></textarea>     
         </div>
-
-            <button type="submit" class="btn btn-info" (click)="updateIncidentHandler()">Update</button>
-        </form>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="form-actions col-md-6" style="text-align: center">
+            <button type="submit" class="btn btn-danger btn-block" (click)="updateIncidentHandler()">Update</button>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+    </form>
   </div>
   </div>
+</div>
   <div class="card m-5">
-      <div class="card-header">
+      <div class="card-header bg-dark text-center" style="color: #f1f1f1">
           Resolution Details
       </div>
       <div class="card-body">
         <div class="form-group">
             <label ><b>Work Notes</b></label>
-            <textarea class="form-control" rows="2" name="WorkNotes" ></textarea>     
+            <textarea class="form-control" rows="2" name="WorkNotes" ></textarea>
+        </div>  
+        <div class="form-row">   
+        <div class="form-group col-md-6">
             <label ><b>Commented by</b></label>
             <select class="form-control" >
               <option selected>--None--</option>
               <option *ngFor="let item of userData">{{item.Name}}</option>
             </select>
         </div>
-        <div class="form-group col-md-8">
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
             <label ><b>Resolution Code</b></label>
             <select class="form-control" >
               <option selected>--None--</option>
@@ -148,16 +165,26 @@
               <option >Closed</option>
             </select>
         </div>
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-6">
             <label ><b>Resolved by</b></label>
             <select class="form-control" >
               <option selected>--None--</option>
               <option *ngFor="let item of userData">{{item.Name}}</option>
             </select>
         </div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="form-actions col-md-5" style="text-align: center">
+            <button type="submit" class="btn btn-danger btn-block" (click)="updateIncidentHandler()">Update</button>
+          </div> 
+          <div class="col"></div>
+        </div>
       </div>
   </div>
-  </div>
+</div>
+</div>
+
 <br><br>
     
  

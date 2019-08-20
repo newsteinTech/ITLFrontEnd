@@ -8,3 +8,22 @@
     height: 100%;
     align-content: center;
     }
+
+/* select option:hover, option:checked{
+        background-color: #BC5090;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    } */
+
+select:active, select:hover {
+    outline: none
+}
+      
+      /* make it red instead (with with same width and style) */
+select:active, select:hover {
+    outline-color: red
+}    
+
+.card{
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
