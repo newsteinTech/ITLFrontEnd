@@ -72,7 +72,16 @@ export class IncidentComponent implements OnInit {
       }
 
     },(err)=>{
+
       console.log(err);
+      console.log(err.error);
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate[""];
+        alert("Access Denied");
+        
+      }
+      
     });
 
     this.service.getCI().subscribe((data:any)=>{
@@ -112,24 +121,63 @@ export class IncidentComponent implements OnInit {
     let urgency = this.createInc.Urgency;
     if(typeof impact == "string" && typeof urgency == "string" ){
 
+      let date = new Date();
+
       if(impact == "High" && urgency == "High"){
-        this.priority = "Reslove within 1 Hour";
+
+        this.priority = "Reslove within 1 Day";
+        date.setDate(date.getDate()+(1));
+        this.createInc.sla = date;
+
       }else if(impact == "High" && urgency == "Medium"){
-        this.priority = "Resolve within 1 Day";
+
+        this.priority = "Resolve within 3 Day";
+        date.setDate(date.getDate()+3);
+        this.createInc.sla = date;
+
       }else if(impact == "High" && urgency == "Low"){
+
         this.priority = "Resolve within 1 week";
+        date.setDate(date.getDate()+7);
+        this.createInc.sla = date;
+
       }else if(impact == "Medium" && urgency == "High"){
+
         this.priority = "Resolve within 1 days";
+        console.log(date);
+        date.setDate(date.getDate()+1);
+        this.createInc.sla = date;
+
       }else if(impact == "Medium" && urgency == "Medium"){
+
         this.priority = "Resolve within 1 week";
+        date.setDate(date.getDate()+(7));
+        this.createInc.sla = date;
+
       }else if(impact == "Medium" && urgency == "Low"){
+
         this.priority = "Resolve within 2 week";
+        date.setDate(date.getDate()+(14));
+        this.createInc.sla = date;
+
       }else if(impact == "Low" && urgency == "High"){
+
         this.priority = "Resolve within 4 days";
+        date.setDate(date.getDate()+(4));
+        this.createInc.sla = date;
+
       }else if(impact == "Low" && urgency == "Medium"){
+
         this.priority = "Resolve within 2 week";
+        date.setDate(date.getDate()+(14));
+        this.createInc.sla = date;
+
       }else if(impact == "Low" && urgency == "Low"){
+
         this.priority = "Resolve within 1 month";
+        date.setDate(date.getDate()+(30));
+        this.createInc.sla = date;
+
       }
       this.createInc.Priority = this.priority;
 
@@ -152,19 +200,18 @@ export class IncidentComponent implements OnInit {
       }
     })
     console.log(this.createInc);
+    
     this.service.createIncident(this.createInc).subscribe((data:any)=>{
 
       console.log(data);
-      window.location.reload();
+      // window.location.reload();
       
     },(err:any)=>{
 
       console.log(err);
 
     })
-
     
-
   }
 
   getUsersInGroups(event){

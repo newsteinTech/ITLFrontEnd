@@ -6,6 +6,8 @@ import { IncidentRes } from '../Class/incident-res';
 import { PagiReq } from '../Class/pagi-req';
 import { IncPagiReq } from '../Class/inc-pagi-req';
 import { IncByNum } from '../Class/inc-by-num';
+import { LoginService } from './login.service';
+import { Login } from '../Class/login';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +17,16 @@ export class IncidentService {
   private header;
   private host;
   public incident:Incident;
+  public user;
   constructor( private http:HttpClient ) {
 
+    console.log(Login);
+    let token = localStorage.getItem('email');
+    console.log(token);
     this.header = new HttpHeaders({
 
-      "Content-type":"application/json"
+      "Content-type":"application/json",
+      "Authorization":token
 
     });
 

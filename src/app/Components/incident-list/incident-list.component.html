@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container container-fluid">
     <br>
 <div class="row">
     <div class="col-lg-2"></div>
@@ -11,8 +11,10 @@
             <th scope="col">Caller</th>
             <th scope="col">State</th>
             <th scope="col">Impact</th>
-            <th scope="col">Assignment Group</th>
+            <th scope="col">Group</th>
+            <th scope="col">SLA(Time Left)</th>
             <th scope="col">Assign To</th>
+            
             </tr>
         </thead>
         <tbody *ngFor = "let inc of incList; index as j">
@@ -23,12 +25,14 @@
             <td>{{inc.State}}</td>
             <td>{{inc.Impact}}</td>
             <td>{{inc.AssignmentGroup.Name}}</td>
+            <td class="sla">{{timeString[j]}}</td>
             <div *ngIf = "inc.AssignedTo != null;">
             <td>{{inc.AssignedTo.Name}}</td>
             </div>
             <div *ngIf = "inc.AssignedTo == null;">
-            <td></td>
+            <!-- <td></td> -->
             </div>
+            
             </tr>
         </tbody>
         </table>

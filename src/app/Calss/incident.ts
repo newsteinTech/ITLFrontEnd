@@ -10,7 +10,8 @@ export class Incident {
 	AssignmentGroup:Array<string>;
     ShortDescription:string;
     Description:string;
-    Priority;string;
+    Priority:string;
+    sla:Date;
     
     // constructor( IncidentNumber,Caller,AssignedTo,ConfigurationItem,State,Impact,Urgency,AssignmentGroup,ShortDescription,Description ){
 

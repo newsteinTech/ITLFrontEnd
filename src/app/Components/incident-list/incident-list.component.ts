@@ -18,6 +18,14 @@ export class IncidentListComponent implements OnInit {
   pagiLength:number;
   value = [];
   pageNu:IncPagiReq;
+  interval;
+  timeLeft;
+  days: number[]=[];
+  hours: number[]=[];
+  minute: number[]=[];
+  seconds: number[]=[];
+  timeString: string[]=[]
+
   constructor( private service:IncidentService, private routes:Router ) { }
 
   ngOnInit() {
@@ -27,6 +35,8 @@ export class IncidentListComponent implements OnInit {
 
       console.log(data);
       this.incList = data.data.Incident;
+      console.log(this.incList);
+      this.intervalSla(this.incList);
       this.pagiLength = data.data.nuOfRec/5;
       for(let k=0;k<this.pagiLength;k++){
 
@@ -39,6 +49,9 @@ export class IncidentListComponent implements OnInit {
       console.log(err);
 
     })
+
+    // this.intervalSla(this.incList);
+    
 
   }
 
@@ -78,6 +91,34 @@ export class IncidentListComponent implements OnInit {
 
     })
     // this.routes.navigate(["editIncident"]);
+
+  }
+
+  private intervalSla(data){
+
+    this.interval = setInterval(()=>{
+
+      for(let i = 0; i<data.length; i++){
+
+        let sla = new Date(data[i].sla).getTime();
+        let currentTime = new Date().getTime();
+        this.timeLeft = Math.floor((sla-currentTime)/1000); 
+        // console.log(this.timeLeft);
+        if(this.timeLeft > 0){
+
+          this.timeLeft--;
+          this.days[i] = Math.floor(this.timeLeft/(60 * 60 * 24));
+          this.hours[i] = Math.floor((this.timeLeft % 86400) / 3600);
+          this.minute[i] = Math.floor((this.timeLeft%3600)/60);
+          this.seconds[i] = this.timeLeft % 60;
+          this.timeString[i] = `${this.days[i]} d ${this.hours[i]} h ${this.minute[i]} m ${this.seconds[i]} s`;
+
+        }
+      }
+      // console.log(this.timeString);
+    },1000);
+    
+    // console.log(data);
 
   }
 
