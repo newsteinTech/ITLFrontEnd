@@ -24,9 +24,7 @@
  <nav>
     <ul class="pagination justify-content-center">
       <li class="page-item" *ngIf="currentPage!=1"><a class="page-link" (click)="Paginate(currentPage-1)">Previous</a></li>
-      <div *ngFor = "let item of pageNum">
-      <li class="page-item" ><a class="page-link" (click)="Paginate(item)">{{item}}</a></li>
-      </div>
+      <li class="page-item" *ngFor = "let item of pageNum"><a class="page-link" (click)="Paginate(item)">{{item}}</a></li>
       <li class="page-item" *ngIf="currentPage!=numOfPages"><a class="page-link" (click)="Paginate(currentPage+1)">Next</a></li>
       
     </ul>

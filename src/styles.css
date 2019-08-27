@@ -1,3 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/*sidebar styles */
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; /* positions the sidebar above other components like header and rest content on the page */
+    top: 0;
+    left: 0;
+    background-color: #003F5C;
+    overflow-x: hidden; /*no horizontal scroll*/
+    overflow-y: auto; /*vertical scrollbar will appear when items in sidebar overflow*/
+    padding-top: 15px;
+    transition: 0.5s;
+  }
+  
+  .sidenav a {
+    padding: 10px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    border-bottom: solid 0.5px white;
+    border-top: solid 0.5px white;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .navbar {
+    background: #f1f1f1;
+  }
+
+  .nav-link{
+    color: #003F5C;
+  }
+  .nav-item a:hover{
+    color: #f1f1f1;
+    background-color: #d94f5a;
+    box-shadow: 10 30px 60px 10 rgba(0,0,0,0.3);
+    border-radius: 5px 5px 5px 5px; 
+  }
+
+  .dropdown-menu {
+    background-color: #111;
+  }
+  
+  /* .dropdown-menu a {
+    color: #818181;
+  } */
+
+  .dropdown-menu a:hover {
+    color: #f1f1f1;
+    background: none;
+  }
+  
+  .dropdown-item {
+    background-color: #111;
+  } 
+
+
+  #main {
+    transition: margin-left .5s;
+  }

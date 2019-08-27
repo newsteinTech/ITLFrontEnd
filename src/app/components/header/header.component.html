@@ -1,51 +1,19 @@
 
-<body> 
-<div class="sidenav">
-    <!-- <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
-    <div class=" container navbar-brand" href=# style="color: white">ITIL PORTAL</div>
-    <a class="nav-link" routerLink='dashboard'>Dashboard</a>
-    <a class="nav-link" routerLink='profile'>Profile</a>
-    <a class="nav-link" routerLink='login'>Login <span class="sr-only"></span></a>
-    <div class="dropdown">
-      <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        User
-      </a>
-      <div class="dropdown-menu" >
-        <a class="dropdown-item" routerLink='addUser'>Add</a>
-        <a class="dropdown-item" routerLink='userList'>List</a>
-      </div> 
-    </div> 
-    <div class="dropdown">
-      <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Incident
-      </a>
-      <div class="dropdown-menu" >
-        <a class="dropdown-item" routerLink='openIncident'>New</a>
-        <a class="dropdown-item" routerLink='incidentList'>List</a>
-        <a class="dropdown-item" routerLink='incidentByAssignedTo'>Assigned To Me</a>
-      </div> 
-    </div>
-    <a class="nav-link" routerLink='login'>Logout <span class="sr-only"></span></a>
-</div>
-
-
 <nav class="navbar navbar-expand-lg">
-
-      <!-- <a class="navbar-brand mr-5" style="color:#111">ITIL PORTAL</a>  -->
-      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+ 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
       </button> 
+      
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <span style="font-size:30px;color:#f1f1f1;cursor:pointer" (click)="openNav()">&#9776; </span> 
-      </div> --> 
-         
+          <span style="font-size:30px;color:#003F5C;cursor:pointer" (click)="openNav()">&#9776; </span>
+          <a class="navbar-brand ml-4" style="color: #003F5C">ITIL PORTAL</a> 
+      </div> 
+      
       <ul class="nav navbar-nav ml-auto"> <!-- ml-auto shifts the navbar components to right-->
       <li class="nav-item"> <a class="nav-link"  routerLink="profile">Home<span class="sr-only"></span></a> </li>
       <li class="nav-item"> <a class="nav-link"  routerLink="login">Logout<span class="sr-only"></span></a></li>
       </ul>
 </nav>
-<!-- <div id="main"> 
-      </div> -->
 
-</body>
 

@@ -113,8 +113,28 @@ export class DashboardComponent implements OnInit {
      this.router.navigate(['profile'])
   }
 
-  openIncidents(){
+  createIncident(){
+    this.router.navigate(['openIncident'])
+  }
+
+  incidentList(){
     this.router.navigate(['incidentList'])
+  }
+
+  incidentsAssignedToMe(){
+    this.router.navigate(['incidentList'])
+  }
+
+  incidentsAssignedToMyGroups(){
+    this.router.navigate(['incidentList'])
+  }
+
+  createUser(){
+    this.router.navigate(['addUser'])
+  }
+
+  userList(){
+    this.router.navigate(['userList'])
   }
 
 }

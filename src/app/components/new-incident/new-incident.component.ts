@@ -186,7 +186,7 @@ export class NewIncidentComponent implements OnInit {
     if(impact=='Low' && urgency=='Low'){
       this.incidentRequest.Priority='Low - 4'
       let date = new Date();
-      date.setDate(date.getDate() + 20)
+      date.setDate(date.getDate() + 30)
       this.incidentRequest.SLA = date;
     }
    }

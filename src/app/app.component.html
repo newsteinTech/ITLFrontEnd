@@ -1,3 +1,37 @@
+<!--responsive sidebar-->
 
+<div class="sidenav" id="mySidenav">
+
+     <div class="container navbar-brand" href=# style="color: white">
+       <!-- <img height="20%" width="20%" src="https://c7.uihere.com/files/744/420/846/information-technology-audit-itil-measurement-meetings-icon-thumb.jpg"> -->
+    </div> 
+    <div href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</div> 
+    <a class="nav-link" routerLink='dashboard'>Dashboard</a>
+    <a class="nav-link" routerLink='profile'>Profile</a>
+    <a class="nav-link" routerLink='login'>Login <span class="sr-only"></span></a>
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        User
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" routerLink='addUser'>Add</a>
+        <a class="dropdown-item" routerLink='userList'>List</a>
+      </div> 
+    </div> 
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Incident
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" routerLink='openIncident'>New</a>
+        <a class="dropdown-item" routerLink='incidentList'>List</a>
+        <!-- <a class="dropdown-item" routerLink='incidentByAssignedTo'>Assigned To Me</a> -->
+      </div> 
+    </div>
+    <a class="nav-link" routerLink='login'>Logout <span class="sr-only"></span></a>
+</div>
+
+<div id="main">
 <app-header></app-header>
 <router-outlet></router-outlet>
+</div>

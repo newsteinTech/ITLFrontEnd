@@ -24,8 +24,11 @@ export class IncidentService {
   
   constructor(private httpClient: HttpClient) {
 
+    let token= localStorage.getItem('accessToken');
+
     this.headers= new HttpHeaders({
-       "Content-Type" : "application/json"
+       "Content-Type" : "application/json",
+       "Authorization": token
     })
     this.host= "http://localhost:3000/api/"
   }

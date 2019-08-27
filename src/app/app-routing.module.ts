@@ -11,7 +11,6 @@ import { TemplateDrivenFormValidationComponent } from './components/template-der
 import { EditIncidentComponent } from './components/edit-incident/edit-incident.component';
 import { UserListPopupComponent } from './components/user-list-popup/user-list-popup.component';
 import { IncidentByAssignedToComponent } from './components/incident-by-assigned-to/incident-by-assigned-to.component';
-import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
@@ -28,8 +27,7 @@ const routes: Routes = [
   {path:'userListPopup', component: UserListPopupComponent},
   {path:'editIncident', component: EditIncidentComponent},
   {path:'form1', component: ReactiveFormValidationComponent},
-  {path:'form2', component: TemplateDrivenFormValidationComponent},
-  {path:'WelcomePage', component: WelcomePageComponent}
+  {path:'form2', component: TemplateDrivenFormValidationComponent}
 ];
 
 @NgModule({
