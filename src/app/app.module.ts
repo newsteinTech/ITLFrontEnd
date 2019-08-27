@@ -22,6 +22,13 @@ import { MatRadioButton } from '@angular/material';
 import { IncidentListComponent } from './Components/incident-list/incident-list.component';
 import { EditIncidentComponent } from './Components/edit-incident/edit-incident.component';
 import { LoginComponent } from './Components/login/login.component';
+import { DashbordComponent } from './Components/dashbord/dashbord.component';
+import { ChartsModule } from 'ng2-charts';
+import { BarDashComponent } from './Components/bar-dash/bar-dash.component';
+import { IncCardComponent } from './Components/inc-card/inc-card.component';
+import { UserCardComponent } from './Components/user-card/user-card.component';
+import { PieChartComponent } from './Components/pie-chart/pie-chart.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,12 @@ import { LoginComponent } from './Components/login/login.component';
     FormTrialComponent,
     IncidentListComponent,
     EditIncidentComponent,
-    LoginComponent
+    LoginComponent,
+    DashbordComponent,
+    BarDashComponent,
+    IncCardComponent,
+    UserCardComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +61,8 @@ import { LoginComponent } from './Components/login/login.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    ChartsModule,
+    NgxLoadingModule.forRoot({})
     // MatRadioButton
   ],
   providers: 

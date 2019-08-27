@@ -23,6 +23,292 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/Components/create-groups/create-groups.component.html":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/Components/create-groups/create-groups.component.html ***!
@@ -42,6 +328,17 @@ module.exports = ""
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-lg-3\"></div>\n        <div class=\"col-lg-6\">\n            <div id=\"ui\">\n                <span class=\"border-top border-primary\">\n                <form class=\"form-group text-center\">\n                    <div class=\"row\">\n                        <div class=\"col-lg-6\">\n                            <label for=\"\">Name</label>\n                            <input type=\"text\" name=\"name\" class=\"form-control\" [(ngModel)] = \"userData.Name\">\n                        </div>\n                        <div class=\"col-lg-6\">\n                            <label for=\"\">UserId</label>\n                            <input type=\"text\" name=\"userId\" class=\"form-control\" [(ngModel)] = \"userData.UserId\">\n                        </div>\n                    </div>\n\n                    <label for=\"\">Email</label>\n                    <input type=\"text\" name=\"email\" class=\"form-control\" [(ngModel)] = \"userData.Email\">\n\n                    <div class=\"row\">\n                        <div class=\"col-lg-6\">\n                            <label for=\"\">Password</label>\n                            <input type=\"password\" name=\"pass\" class=\"form-control\" [(ngModel)] = \"userData.Password\">\n                        </div>\n                        <div class=\"col-lg-6\">\n                        <select class=\"form-control\" id=\"select\" [(ngModel)] = userData.Role [ngModelOptions]=\"{standalone: true}\">\n                            <option>Admin</option>\n                            <option>ITIL Admin</option>\n                            <option>Manager</option>\n                            <option>CS Reps</option>\n                            <option>Employee</option>\n                            <option>Customer</option>\n                        </select>\n                        </div>\n                    </div>\n                    <br>\n                    <br>\n                    <select multiple class=\"form-control\">\n                        <option>Choose Groups</option>\n                    </select>\n                    <br>\n                    <input type=\"submit\" name=\"submit\" value=\"Submit\" class=\"btn btn-primary btn-block\" (click) = \"createUser()\" >\n                </form>\n            </span>\n            </div>\n        </div>\n        <div class=\"col-lg-3\"></div>\n    </div>\n</div>\n\n<div class=\"container\">\n    <!-- <mat-toolbar>\n        <span class=\"fillSpace\"></span>\n        <span>CreateUser</span>\n        <span class=\"fillSpace\"></span>\n    </mat-toolbar> -->\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/Components/dashbord/dashbord.component.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/Components/dashbord/dashbord.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<br>\n<div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"card col-md-4 \" style=\"width: 18rem;\">\n        <img class=\"card-img-top\" src=\"../../../assets/Images/IncidentCard2.jpg\" alt=\"Card image cap\">\n        <div class=\"card-body\">\n          <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        </div>\n        <div >\n            <div class=\"card-body row\">\n                <div class=\"col-md-6\">\n                <a class=\"card-link\" class=\"btn btn-warning\">Create Incident </a>\n                </div>\n                <!-- <div class=\"col-md-1\"></div> -->\n                <div class=\"col-md-6\">\n                <a class=\"card-link\" class=\"btn btn-warning\"> View Incident </a>\n                </div>\n            </div>\n        </div>\n      </div>\n      <div class=\"col-md-1\"></div>\n      <div class=\"card col-md-4\" style=\"width: 18rem;\">\n        <img class=\"card-img-top\" src=\"../../../assets/Images/usersCard.jpg\" alt=\"Card image cap\">\n        <div class=\"card-body\">\n          <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n        </div>\n        <div >\n                <div class=\"card-body row\">\n                    <div class=\"col-md-6\">\n                    <a class=\"card-link\" class=\"btn btn-warning\">Create User </a>\n                </div>\n                <!-- <div class=\"col-md-1\"></div> -->\n                <div class=\"col-md-6\">\n                <a class=\"card-link\" class=\"btn btn-warning\"> View User </a>\n                </div>\n            </div>\n        </div>\n      </div>\n      <div class=\"col-md-1\"></div>\n</div>   \n\n4\n5\n6\n7\n8\n9\n10\n11\n12\n<div class=\"container\">\n  <div class=\"col-lg-12 text-center\">\n    <h2 class=\"text-center\">PIE chart using Chartjs and Angular 6</h2>\n    <canvas baseChart\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          [options]=\"pieChartOptions\"\n          (chartHover)=\"chartHovered($event)\"\n          (chartClick)=\"chartClicked($event)\"></canvas>\n      </div>\n</div> \n<div class=\"container row\">\n    <div class=\"col-lg-2\"></div>\n        <div class=\"col-lg-10 text-center\">\n          <h2 class=\"text-center\">PIE chart using Chartjs and Angular 6</h2>\n<canvas\n    baseChart\n    [chartType]=\"'bar'\"\n    [datasets]=\"chartData\"\n    [labels]=\"labels\"\n    [options]=\"chartOptions\"\n    [legend]=\"true\"\n    [colors]=\"colors\"\n    (chartClick)=\"onChartClick($event)\">\n</canvas>\n</div>\n</div> \n      "
 
 /***/ }),
 
@@ -85,7 +382,7 @@ module.exports = "<footer class=\"blockquote-footer fixed-bottom text-center bg-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <!-- <div class=\"row\"> -->\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark \">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n  \n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Action</a>\n            <a class=\"dropdown-item\" href=\"#\">Another action</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n          </div>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n<!-- </div> -->\n  <!-- <div class=\"row\"> -->\n  <!-- <nav class=\"col-md-2 d-none d-md-block bg-light sidebar\">\n      <div class=\"sidebar-sticky\">\n        <ul class=\"nav flex-column\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link active\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-home\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline></svg>\n              Dashboard <span class=\"sr-only\">(current)</span>\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"></path><polyline points=\"13 2 13 9 20 9\"></polyline></svg>\n              Orders\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-shopping-cart\"><circle cx=\"9\" cy=\"21\" r=\"1\"></circle><circle cx=\"20\" cy=\"21\" r=\"1\"></circle><path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\"></path></svg>\n              Products\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-users\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg>\n              Customers\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-bar-chart-2\"><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"></line><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"></line><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"></line></svg>\n              Reports\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-layers\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>\n              Integrations\n            </a>\n          </li>\n        </ul> \n  \n        <h6 class=\"sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted\">\n          <span>Saved reports</span>\n          <a class=\"d-flex align-items-center text-muted\" href=\"#\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-plus-circle\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"></line><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"></line></svg>\n          </a>\n        </h6>\n        <ul class=\"nav flex-column mb-2\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file-text\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\n              Current month\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file-text\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\n              Last quarter\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file-text\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\n              Social engagement\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file-text\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\n              Year-end sale\n            </a>\n          </li>\n        </ul> \n      </div> \n    </nav> -->\n  </div>\n  <!-- </div> -->\n"
+module.exports = "\n    <body> \n      <div class=\"sidenav\">\n          <a href=\"javascript:void(0)\" class=\"closebtn\" (click)=\"closeNav()\">&times;</a>\n          <div class=\" container navbar-brand\" href=# style=\"color: white\">ITIL PORTAL</div>\n          <a class=\"nav-link\" routerLink='dashboard'>Dashboard</a>\n          <a class=\"nav-link\" routerLink='profile'>Profile</a>\n          <a class=\"nav-link\" routerLink='login'>Login <span class=\"sr-only\"></span></a>\n          <div class=\"dropdown\">\n            <a class=\"dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n              User\n            </a>\n            <div class=\"dropdown-menu\" >\n              <a class=\"dropdown-item\" routerLink='addUser'>Add</a>\n              <a class=\"dropdown-item\" routerLink='userList'>List</a>\n            </div> \n          </div> \n          <div class=\"dropdown\">\n            <a class=\"dropdown-toggle\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n              Incident\n            </a>\n            <div class=\"dropdown-menu\" >\n              <a class=\"dropdown-item\" routerLink='openIncident'>New</a>\n              <a class=\"dropdown-item\" routerLink='incidentList'>List</a>\n              <a class=\"dropdown-item\" routerLink='incidentByAssignedTo'>Assigned To Me</a>\n            </div> \n          </div>\n          <a class=\"nav-link\" routerLink='login'>Logout <span class=\"sr-only\"></span></a>\n      </div>\n      \n      \n      <nav class=\"navbar navbar-expand-lg\">\n      \n      \n               \n            <ul class=\"nav navbar-nav ml-auto\"> \n            <li class=\"nav-item\"> <a class=\"nav-link\"  routerLink=\"profile\">Home<span class=\"sr-only\"></span></a> </li>\n            <li class=\"nav-item\"> <a class=\"nav-link\"  routerLink=\"login\">Logout<span class=\"sr-only\"></span></a></li>\n            </ul>\n      </nav>\n     \n      \n      </body>\n      \n"
 
 /***/ }),
 
@@ -96,7 +393,7 @@ module.exports = "<div class=\"container-fluid\">\n  <!-- <div class=\"row\"> --
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <br>\n<div class=\"row\">\n    <div class=\"col-lg-2\"></div>\n    <div class=\"col-lg-8\">\n        <table class=\"table\">\n        <thead class=\"thead-light\">\n            <tr>\n            <th scope=\"col\">#</th>\n            <th scope=\"col\">Incident Number</th>\n            <th scope=\"col\">Caller</th>\n            <th scope=\"col\">State</th>\n            <th scope=\"col\">Impact</th>\n            <th scope=\"col\">Assignment Group</th>\n            <th scope=\"col\">Assign To</th>\n            </tr>\n        </thead>\n        <tbody *ngFor = \"let inc of incList; index as j\">\n            <tr (click) = \"editIncident(inc.IncidentNumber)\" id=\"list\">\n            <th scope=\"row\">{{j+1}}</th>\n            <td>INC-00{{inc.IncidentNumber}}</td>\n            <td>{{inc.Caller.Name}}</td>\n            <td>{{inc.State}}</td>\n            <td>{{inc.Impact}}</td>\n            <td>{{inc.AssignmentGroup.Name}}</td>\n            <div *ngIf = \"inc.AssignedTo != null;\">\n            <td>{{inc.AssignedTo.Name}}</td>\n            </div>\n            <div *ngIf = \"inc.AssignedTo == null;\">\n            <td></td>\n            </div>\n            </tr>\n        </tbody>\n        </table>\n    </div>\n    <div class=\"col-lg-2\"></div>\n</div>\n<nav aria-label=\"Page navigation example\">\n    <ul class=\"pagination col-md-6\">\n      <div *ngFor = \"let val of value; index as j\">\n      <li class=\"page-item\"><a class=\"page-link\" (click)=\"pagi(j)\" name=\"name\">{{j+1}}</a></li>\n      </div>\n    </ul>\n  </nav>\n</div>"
+module.exports = "<div class=\"container container-fluid\">\n    <br>\n<div class=\"row\">\n    <div class=\"col-lg-2\"></div>\n    <div class=\"col-lg-8\">\n        <table class=\"table\">\n        <thead class=\"thead-light\">\n            <tr>\n            <th scope=\"col\">#</th>\n            <th scope=\"col\">Incident Number</th>\n            <th scope=\"col\">Caller</th>\n            <th scope=\"col\">State</th>\n            <th scope=\"col\">Impact</th>\n            <th scope=\"col\">Group</th>\n            <th scope=\"col\">SLA(Time Left)</th>\n            <th scope=\"col\">Assign To</th>\n            \n            </tr>\n        </thead>\n        <tbody *ngFor = \"let inc of incList; index as j\">\n            <tr (click) = \"editIncident(inc.IncidentNumber)\" id=\"list\">\n            <th scope=\"row\">{{j+1}}</th>\n            <td>INC-00{{inc.IncidentNumber}}</td>\n            <td>{{inc.Caller.Name}}</td>\n            <td>{{inc.State}}</td>\n            <td>{{inc.Impact}}</td>\n            <td>{{inc.AssignmentGroup.Name}}</td>\n            <td class=\"sla\">{{timeString[j]}}</td>\n            <div *ngIf = \"inc.AssignedTo != null;\">\n            <td>{{inc.AssignedTo.Name}}</td>\n            </div>\n            <div *ngIf = \"inc.AssignedTo == null;\">\n            <!-- <td></td> -->\n            </div>\n            \n            </tr>\n        </tbody>\n        </table>\n    </div>\n    <div class=\"col-lg-2\"></div>\n</div>\n<nav aria-label=\"Page navigation example\">\n    <ul class=\"pagination col-md-6\">\n      <div *ngFor = \"let val of value; index as j\">\n      <li class=\"page-item\"><a class=\"page-link\" (click)=\"pagi(j)\" name=\"name\">{{j+1}}</a></li>\n      </div>\n    </ul>\n  </nav>\n</div>"
 
 /***/ }),
 
@@ -118,7 +415,7 @@ module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"login-box centered\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-4 login-sec\">\n          <ul id=\"tabsJustified\" class=\"nav nav-tabs\">\n            <li class=\"nav-item\"><a href=\"\" data-target=\"#signin\" data-toggle=\"tab\" class=\"nav-link active\">Sign In</a></li>\n            <!-- <li class=\"nav-item\"><a href=\"\" data-target=\"#signup\" data-toggle=\"tab\" class=\"nav-link\">Sign Up</a></li> -->\n          </ul>\n          <br>\n          <div id=\"tabsJustifiedContent\" class=\"tab-content\">\n            <div id=\"signin\" class=\"tab-pane fade active show\">\n              <form class=\"login-form\">\n                <div class=\"form-group\">\n                  <label for=\"exampleInputEmail1\" class=\"text-uppercase\"  >Email</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\"[(ngModel)] = \"data.Email\" name=\"Email\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\" >Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\" [(ngModel)] = \"data.Password\" name=\"Password\">\n                </div>\n            \n                <div class=\"form-check\">\n                  <label class=\"form-check-label\">\n                    <!-- <input type=\"checkbox\" class=\"form-check-input\"> -->\n                    <!-- <small>Remember Me</small> -->\n                  </label>\n                  <button type=\"submit\" class=\"btn btn-login float-right\" (click)=\"login()\" >LOG IN</button>\n                </div>\n              </form>\n            </div>\n            <!-- <div id=\"signup\" class=\"tab-pane fade\">\n              <form class=\"login-form\">\n                <div class=\"form-group\">\n                  <label for=\"exampleInputEmail1\" class=\"text-uppercase\">Full Name</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Confirm Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Email Address</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n            \n                <div class=\"form-check\">\n                  <button type=\"submit\" class=\"btn btn-login float-right\">REGISTER</button>\n                </div>\n              </form>\n            </div> -->\n          </div>\n          <!-- <div class=\"copy-text\">Created with <i class=\"fa fa-heart\"></i> by <a href=\"http://kiaijoe.com\">kiaijoe</a></div> -->\n        </div>\n        <div class=\"col-md-8 banner-sec\">\n          <div class=\"carousel-caption d-none d-md-block\">\n            <div class=\"banner-text\">\n              <h2>This is Heaven</h2>\n              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>\n            </div>  \n          </div>      \n        </div>\n      </div>\n    </div>\n  </section>"
+module.exports = "<section class=\"login-box centered\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-4 login-sec\">\n          <ul id=\"tabsJustified\" class=\"nav nav-tabs\">\n            <li class=\"nav-item\"><a href=\"\" data-target=\"#signin\" data-toggle=\"tab\" class=\"nav-link active\">Sign In</a></li>\n            <!-- <li class=\"nav-item\"><a href=\"\" data-target=\"#signup\" data-toggle=\"tab\" class=\"nav-link\">Sign Up</a></li> -->\n          </ul>\n          <br>\n          <div id=\"tabsJustifiedContent\" class=\"tab-content\">\n            <div id=\"signin\" class=\"tab-pane fade active show\">\n              <form class=\"login-form\">\n                <div class=\"form-group\">\n                  <label for=\"exampleInputEmail1\" class=\"text-uppercase\"  >Email</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\"[(ngModel)] = \"data.Email\" name=\"Email\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\" >Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\" [(ngModel)] = \"data.Password\" name=\"Password\">\n                </div>\n            \n                <div class=\"form-check\">\n                  <label class=\"form-check-label\">\n                    <!-- <input type=\"checkbox\" class=\"form-check-input\"> -->\n                    <!-- <small>Remember Me</small> -->\n                  </label>\n                  <button type=\"submit\" class=\"btn btn-login float-right\" (click)=\"login()\" >LOG IN</button>\n                </div>\n              </form>\n            </div>\n            <!-- <div id=\"signup\" class=\"tab-pane fade\">\n              <form class=\"login-form\">\n                <div class=\"form-group\">\n                  <label for=\"exampleInputEmail1\" class=\"text-uppercase\">Full Name</label>\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Confirm Password</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"exampleInputPassword1\" class=\"text-uppercase\">Email Address</label>\n                  <input type=\"password\" class=\"form-control\" placeholder=\"\">\n                </div>\n            \n                <div class=\"form-check\">\n                  <button type=\"submit\" class=\"btn btn-login float-right\">REGISTER</button>\n                </div>\n              </form>\n            </div> -->\n          </div>\n          <!-- <div class=\"copy-text\">Created with <i class=\"fa fa-heart\"></i> by <a href=\"http://kiaijoe.com\">kiaijoe</a></div> -->\n        </div>\n        <div class=\"col-md-8 banner-sec\">\n          <div class=\"carousel-caption d-none d-md-block\">\n            <div class=\"banner-text\">\n              <h2>This is Heaven</h2>\n              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>\n            </div>  \n          </div>      \n        </div>\n      </div>\n      <div class=\"alert alert-danger\" role=\"alert\" name=\"alert\"  *ngIf = \"islogin == false\">\n        Username or password is wrong\n      </div>\n    </div>\n    \n  </section>"
 
 /***/ }),
 
@@ -471,6 +768,98 @@ var CreateUserComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Components/dashbord/dashbord.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/Components/dashbord/dashbord.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudHMvZGFzaGJvcmQvZGFzaGJvcmQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/Components/dashbord/dashbord.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/Components/dashbord/dashbord.component.ts ***!
+  \***********************************************************/
+/*! exports provided: DashbordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashbordComponent", function() { return DashbordComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var DashbordComponent = /** @class */ (function () {
+    function DashbordComponent() {
+        this.pieChartLabels = ["Pending", "InProgress", "OnHold", "Complete", "Cancelled"];
+        this.pieChartData = [21, 39, 10, 14, 16];
+        this.pieChartType = 'pie';
+        this.pieChartOptions = { 'backgroundColor': [
+                "#FF6384",
+                "#4BC0C0",
+                "#FFCE56",
+                "#E7E9ED",
+                "#36A2EB"
+            ] };
+        // ADD CHART OPTIONS. 
+        this.chartOptions = {
+            responsive: true // THIS WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+        };
+        this.labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+        // STATIC DATA FOR THE CHART IN JSON FORMAT.
+        this.chartData = [
+            {
+                label: '1st Year',
+                data: [21, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59]
+            }
+            // { 
+            //   label: '2nd Year',
+            //   data: [47, 9, 28, 54, 77, 51, 24]
+            // }
+        ];
+        // CHART COLOR.
+        this.colors = [
+            {
+                backgroundColor: 'rgba(30, 169, 224, 0.8)'
+            }
+            // { // 2nd Year.
+            //   backgroundColor: 'rgba(30, 169, 224, 0.8)'
+            // }
+        ];
+    }
+    DashbordComponent.prototype.ngOnInit = function () {
+    };
+    // events on slice click
+    DashbordComponent.prototype.chartClicked = function (e) {
+        console.log(e);
+    };
+    // event on pie chart slice hover
+    DashbordComponent.prototype.chartHovered = function (e) {
+        console.log(e);
+    };
+    // CHART CLICK EVENT.
+    DashbordComponent.prototype.onChartClick = function (event) {
+        console.log(event);
+    };
+    DashbordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-dashbord',
+            template: __webpack_require__(/*! raw-loader!./dashbord.component.html */ "./node_modules/raw-loader/index.js!./src/app/Components/dashbord/dashbord.component.html"),
+            styles: [__webpack_require__(/*! ./dashbord.component.css */ "./src/app/Components/dashbord/dashbord.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], DashbordComponent);
+    return DashbordComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Components/edit-incident/edit-incident.component.css":
 /*!**********************************************************************!*\
   !*** ./src/app/Components/edit-incident/edit-incident.component.css ***!
@@ -545,32 +934,52 @@ var EditIncidentComponent = /** @class */ (function () {
         var impact = this.incData.Impact;
         var urgency = this.incData.Urgency;
         if (typeof impact == "string" && typeof urgency == "string") {
+            var date = new Date();
             if (impact == "High" && urgency == "High") {
-                this.priority = "Reslove within 1 Hour";
+                this.priority = "Reslove within 1 Day";
+                date.setDate(date.getDate() + (1));
+                this.incData.sla = date;
             }
             else if (impact == "High" && urgency == "Medium") {
-                this.priority = "Resolve within 1 Day";
+                this.priority = "Resolve within 3 Day";
+                date.setDate(date.getDate() + 3);
+                this.incData.sla = date;
             }
             else if (impact == "High" && urgency == "Low") {
                 this.priority = "Resolve within 1 week";
+                date.setDate(date.getDate() + 7);
+                this.incData.sla = date;
             }
             else if (impact == "Medium" && urgency == "High") {
                 this.priority = "Resolve within 1 days";
+                console.log(date);
+                date.setDate(date.getDate() + 1);
+                this.incData.sla = date;
             }
             else if (impact == "Medium" && urgency == "Medium") {
                 this.priority = "Resolve within 1 week";
+                date.setDate(date.getDate() + (7));
+                this.incData.sla = date;
             }
             else if (impact == "Medium" && urgency == "Low") {
                 this.priority = "Resolve within 2 week";
+                date.setDate(date.getDate() + (14));
+                this.incData.sla = date;
             }
             else if (impact == "Low" && urgency == "High") {
                 this.priority = "Resolve within 4 days";
+                date.setDate(date.getDate() + (4));
+                this.incData.sla = date;
             }
             else if (impact == "Low" && urgency == "Medium") {
                 this.priority = "Resolve within 2 week";
+                date.setDate(date.getDate() + (14));
+                this.incData.sla = date;
             }
             else if (impact == "Low" && urgency == "Low") {
                 this.priority = "Resolve within 1 month";
+                date.setDate(date.getDate() + (30));
+                this.incData.sla = date;
             }
             this.incData.Priority = this.priority;
         }
@@ -784,7 +1193,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "body {\r\n    font-family: \"Lato\", sans-serif;\r\n  }\r\n  \r\n  .sidenav {\r\n    height: 100%;\r\n    width: 180px;\r\n    position: fixed;\r\n    z-index: 1; \r\n    top: 0;\r\n    left: 0;\r\n    background-color: #003F5C;\r\n    overflow-x: hidden; \r\n    overflow-y: auto; \r\n    padding-top: 10px;\r\n  }\r\n  \r\n  .sidenav a {\r\n    padding: 6px 8px 6px 16px;\r\n    text-decoration: none;\r\n    font-size: 20px;\r\n    color: #f1f1f1;\r\n    display: block;\r\n    width: 100%;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n    border: solid 1px white;\r\n  }\r\n  \r\n  @media screen and (max-height: 450px) {\r\n    .sidenav {padding-top: 15px;}\r\n    .sidenav a {font-size: 18px;}\r\n  }\r\n  \r\n  .navbar {\r\n    background: #f1f1f1;\r\n  }\r\n  \r\n  .nav-link{\r\n    color: #003F5C;\r\n  }\r\n  \r\n  .nav-item a:hover{\r\n    color: #f1f1f1;\r\n    background: #818181;\r\n    box-shadow: 10 30px 60px 10 rgba(0,0,0,0.3);\r\n    border-radius: 5px 5px 5px 5px; \r\n  }\r\n  \r\n  .dropdown-menu {\r\n    background-color: #111;\r\n  }\r\n  \r\n  .dropdown-menu a:hover {\r\n    color: #f1f1f1;\r\n    background: #818181;\r\n  }\r\n  \r\n  .dropdown-item {\r\n    background-color: #111;\r\n  } \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50cy9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwrQkFBK0I7RUFDakM7O0VBRUE7SUFDRSxZQUFZO0lBQ1osWUFBWTtJQUNaLGVBQWU7SUFDZixVQUFVO0lBQ1YsTUFBTTtJQUNOLE9BQU87SUFDUCx5QkFBeUI7SUFDekIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixpQkFBaUI7RUFDbkI7O0VBRUE7SUFDRSx5QkFBeUI7SUFDekIscUJBQXFCO0lBQ3JCLGVBQWU7SUFDZixjQUFjO0lBQ2QsY0FBYztJQUNkLFdBQVc7SUFDWCxlQUFlO0VBQ2pCOztFQUVBO0lBQ0UsY0FBYztJQUNkLHVCQUF1QjtFQUN6Qjs7RUFFQTtJQUNFLFVBQVUsaUJBQWlCLENBQUM7SUFDNUIsWUFBWSxlQUFlLENBQUM7RUFDOUI7O0VBRUE7SUFDRSxtQkFBbUI7RUFDckI7O0VBRUE7SUFDRSxjQUFjO0VBQ2hCOztFQUNBO0lBQ0UsY0FBYztJQUNkLG1CQUFtQjtJQUNuQiwyQ0FBMkM7SUFDM0MsOEJBQThCO0VBQ2hDOztFQUVBO0lBQ0Usc0JBQXNCO0VBQ3hCOztFQUlBO0lBQ0UsY0FBYztJQUNkLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLHNCQUFzQjtFQUN4QiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgICBmb250LWZhbWlseTogXCJMYXRvXCIsIHNhbnMtc2VyaWY7XHJcbiAgfVxyXG4gIFxyXG4gIC5zaWRlbmF2IHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHdpZHRoOiAxODBweDtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHotaW5kZXg6IDE7IFxyXG4gICAgdG9wOiAwO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDNGNUM7XHJcbiAgICBvdmVyZmxvdy14OiBoaWRkZW47IFxyXG4gICAgb3ZlcmZsb3cteTogYXV0bzsgXHJcbiAgICBwYWRkaW5nLXRvcDogMTBweDtcclxuICB9XHJcbiAgXHJcbiAgLnNpZGVuYXYgYSB7XHJcbiAgICBwYWRkaW5nOiA2cHggOHB4IDZweCAxNnB4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZm9udC1zaXplOiAyMHB4O1xyXG4gICAgY29sb3I6ICNmMWYxZjE7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIH1cclxuICBcclxuICAuc2lkZW5hdiBhOmhvdmVyIHtcclxuICAgIGNvbG9yOiAjZjFmMWYxO1xyXG4gICAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGU7XHJcbiAgfVxyXG4gIFxyXG4gIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtaGVpZ2h0OiA0NTBweCkge1xyXG4gICAgLnNpZGVuYXYge3BhZGRpbmctdG9wOiAxNXB4O31cclxuICAgIC5zaWRlbmF2IGEge2ZvbnQtc2l6ZTogMThweDt9XHJcbiAgfVxyXG5cclxuICAubmF2YmFyIHtcclxuICAgIGJhY2tncm91bmQ6ICNmMWYxZjE7XHJcbiAgfVxyXG5cclxuICAubmF2LWxpbmt7XHJcbiAgICBjb2xvcjogIzAwM0Y1QztcclxuICB9XHJcbiAgLm5hdi1pdGVtIGE6aG92ZXJ7XHJcbiAgICBjb2xvcjogI2YxZjFmMTtcclxuICAgIGJhY2tncm91bmQ6ICM4MTgxODE7XHJcbiAgICBib3gtc2hhZG93OiAxMCAzMHB4IDYwcHggMTAgcmdiYSgwLDAsMCwwLjMpO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4IDVweCA1cHggNXB4OyBcclxuICB9XHJcblxyXG4gIC5kcm9wZG93bi1tZW51IHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxMTE7XHJcbiAgfVxyXG4gIFxyXG4gIFxyXG5cclxuICAuZHJvcGRvd24tbWVudSBhOmhvdmVyIHtcclxuICAgIGNvbG9yOiAjZjFmMWYxO1xyXG4gICAgYmFja2dyb3VuZDogIzgxODE4MTtcclxuICB9XHJcbiAgXHJcbiAgLmRyb3Bkb3duLWl0ZW0ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzExMTtcclxuICB9ICJdfQ== */"
 
 /***/ }),
 
@@ -806,6 +1215,14 @@ var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
     }
     HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent.prototype.openNav = function () {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    };
+    HeaderComponent.prototype.closeNav = function () {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -829,7 +1246,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#list:hover{\r\n    cursor:pointer;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50cy9pbmNpZGVudC1saXN0L2luY2lkZW50LWxpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9Db21wb25lbnRzL2luY2lkZW50LWxpc3QvaW5jaWRlbnQtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2xpc3Q6aG92ZXJ7XHJcbiAgICBjdXJzb3I6cG9pbnRlcjtcclxufSJdfQ== */"
+module.exports = "#list:hover{\r\n    cursor:pointer;\r\n}\r\n .sla{\r\n    width: 115%,\r\n    \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50cy9pbmNpZGVudC1saXN0L2luY2lkZW50LWxpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7QUFDbEI7Q0FDQztJQUNHOztBQUVKIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50cy9pbmNpZGVudC1saXN0L2luY2lkZW50LWxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNsaXN0OmhvdmVye1xyXG4gICAgY3Vyc29yOnBvaW50ZXI7XHJcbn1cclxuIC5zbGF7XHJcbiAgICB3aWR0aDogMTE1JSxcclxuICAgIFxyXG59Il19 */"
 
 /***/ }),
 
@@ -860,6 +1277,11 @@ var IncidentListComponent = /** @class */ (function () {
         this.service = service;
         this.routes = routes;
         this.value = [];
+        this.days = [];
+        this.hours = [];
+        this.minute = [];
+        this.seconds = [];
+        this.timeString = [];
     }
     IncidentListComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -867,6 +1289,8 @@ var IncidentListComponent = /** @class */ (function () {
         this.service.pagi(this.pageNu, this.pageNu.type.onLoad).subscribe(function (data) {
             console.log(data);
             _this.incList = data.data.Incident;
+            console.log(_this.incList);
+            _this.intervalSla(_this.incList);
             _this.pagiLength = data.data.nuOfRec / 5;
             for (var k = 0; k < _this.pagiLength; k++) {
                 _this.value.push(k);
@@ -874,6 +1298,7 @@ var IncidentListComponent = /** @class */ (function () {
         }, function (err) {
             console.log(err);
         });
+        // this.intervalSla(this.incList);
     };
     IncidentListComponent.prototype.pagi = function (j) {
         var _this = this;
@@ -901,6 +1326,27 @@ var IncidentListComponent = /** @class */ (function () {
             console.log(err);
         });
         // this.routes.navigate(["editIncident"]);
+    };
+    IncidentListComponent.prototype.intervalSla = function (data) {
+        var _this = this;
+        this.interval = setInterval(function () {
+            for (var i = 0; i < data.length; i++) {
+                var sla = new Date(data[i].sla).getTime();
+                var currentTime = new Date().getTime();
+                _this.timeLeft = Math.floor((sla - currentTime) / 1000);
+                // console.log(this.timeLeft);
+                if (_this.timeLeft > 0) {
+                    _this.timeLeft--;
+                    _this.days[i] = Math.floor(_this.timeLeft / (60 * 60 * 24));
+                    _this.hours[i] = Math.floor((_this.timeLeft % 86400) / 3600);
+                    _this.minute[i] = Math.floor((_this.timeLeft % 3600) / 60);
+                    _this.seconds[i] = _this.timeLeft % 60;
+                    _this.timeString[i] = _this.days[i] + " d " + _this.hours[i] + " h " + _this.minute[i] + " m " + _this.seconds[i] + " s";
+                }
+            }
+            // console.log(this.timeString);
+        }, 1000);
+        // console.log(data);
     };
     IncidentListComponent.ctorParameters = function () { return [
         { type: src_app_Services_incident_service__WEBPACK_IMPORTED_MODULE_2__["IncidentService"] },
@@ -994,6 +1440,11 @@ var IncidentComponent = /** @class */ (function () {
             }
         }, function (err) {
             console.log(err);
+            console.log(err.error);
+            if (err.error == "Access Denied.") {
+                _this.routes.navigate[""];
+                alert("Access Denied");
+            }
         });
         this.service.getCI().subscribe(function (data) {
             console.log(data);
@@ -1021,32 +1472,52 @@ var IncidentComponent = /** @class */ (function () {
         var impact = this.createInc.Impact;
         var urgency = this.createInc.Urgency;
         if (typeof impact == "string" && typeof urgency == "string") {
+            var date = new Date();
             if (impact == "High" && urgency == "High") {
-                this.priority = "Reslove within 1 Hour";
+                this.priority = "Reslove within 1 Day";
+                date.setDate(date.getDate() + (1));
+                this.createInc.sla = date;
             }
             else if (impact == "High" && urgency == "Medium") {
-                this.priority = "Resolve within 1 Day";
+                this.priority = "Resolve within 3 Day";
+                date.setDate(date.getDate() + 3);
+                this.createInc.sla = date;
             }
             else if (impact == "High" && urgency == "Low") {
                 this.priority = "Resolve within 1 week";
+                date.setDate(date.getDate() + 7);
+                this.createInc.sla = date;
             }
             else if (impact == "Medium" && urgency == "High") {
                 this.priority = "Resolve within 1 days";
+                console.log(date);
+                date.setDate(date.getDate() + 1);
+                this.createInc.sla = date;
             }
             else if (impact == "Medium" && urgency == "Medium") {
                 this.priority = "Resolve within 1 week";
+                date.setDate(date.getDate() + (7));
+                this.createInc.sla = date;
             }
             else if (impact == "Medium" && urgency == "Low") {
                 this.priority = "Resolve within 2 week";
+                date.setDate(date.getDate() + (14));
+                this.createInc.sla = date;
             }
             else if (impact == "Low" && urgency == "High") {
                 this.priority = "Resolve within 4 days";
+                date.setDate(date.getDate() + (4));
+                this.createInc.sla = date;
             }
             else if (impact == "Low" && urgency == "Medium") {
                 this.priority = "Resolve within 2 week";
+                date.setDate(date.getDate() + (14));
+                this.createInc.sla = date;
             }
             else if (impact == "Low" && urgency == "Low") {
                 this.priority = "Resolve within 1 month";
+                date.setDate(date.getDate() + (30));
+                this.createInc.sla = date;
             }
             this.createInc.Priority = this.priority;
         }
@@ -1066,7 +1537,7 @@ var IncidentComponent = /** @class */ (function () {
         console.log(this.createInc);
         this.service.createIncident(this.createInc).subscribe(function (data) {
             console.log(data);
-            window.location.reload();
+            // window.location.reload();
         }, function (err) {
             console.log(err);
         });
@@ -1163,13 +1634,20 @@ var LoginComponent = /** @class */ (function () {
         console.log(this.data);
         this.services.login(this.data).subscribe(function (data) {
             console.log(data);
-            var email = _this.data.Email;
-            console.log(data.data);
-            console.log(email);
-            localStorage.setItem('email', data.data);
-            _this.routes.navigate(['']);
+            if (data.data == null) {
+                _this.islogin = false;
+            }
+            else {
+                var email = _this.data.Email;
+                console.log(data.data);
+                console.log(email);
+                localStorage.setItem('email', data.data);
+                _this.routes.navigate(['']);
+            }
         }, function (err) {
             console.log(err);
+            // alert("Username or pasword is wrong.");
+            _this.islogin = false;
         });
     };
     LoginComponent.ctorParameters = function () { return [
@@ -1571,7 +2049,7 @@ var LoginService = /** @class */ (function () {
         this.host = "http://localhost:3000/api/user/login";
     }
     LoginService.prototype.login = function (req) {
-        _Class_login__WEBPACK_IMPORTED_MODULE_3__["Login"].em = req.Email;
+        // Login.em = req.Email;
         console.log(_Class_login__WEBPACK_IMPORTED_MODULE_3__["Login"].em);
         return this.http.post(this.host, req, { headers: this.header });
     };
@@ -1682,6 +2160,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_incident_list_incident_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Components/incident-list/incident-list.component */ "./src/app/Components/incident-list/incident-list.component.ts");
 /* harmony import */ var _Components_edit_incident_edit_incident_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Components/edit-incident/edit-incident.component */ "./src/app/Components/edit-incident/edit-incident.component.ts");
 /* harmony import */ var _Components_login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Components/login/login.component */ "./src/app/Components/login/login.component.ts");
+/* harmony import */ var _Components_dashbord_dashbord_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Components/dashbord/dashbord.component */ "./src/app/Components/dashbord/dashbord.component.ts");
+
 
 
 
@@ -1701,7 +2181,8 @@ var routes = [
     { path: "trialForm", component: _form_trial_form_trial_component__WEBPACK_IMPORTED_MODULE_7__["FormTrialComponent"] },
     { path: "incidentList", component: _Components_incident_list_incident_list_component__WEBPACK_IMPORTED_MODULE_8__["IncidentListComponent"] },
     { path: "editIncident", component: _Components_edit_incident_edit_incident_component__WEBPACK_IMPORTED_MODULE_9__["EditIncidentComponent"] },
-    { path: "login", component: _Components_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"] }
+    { path: "login", component: _Components_login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"] },
+    { path: "dashboard", component: _Components_dashbord_dashbord_component__WEBPACK_IMPORTED_MODULE_11__["DashbordComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1796,6 +2277,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_incident_list_incident_list_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Components/incident-list/incident-list.component */ "./src/app/Components/incident-list/incident-list.component.ts");
 /* harmony import */ var _Components_edit_incident_edit_incident_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Components/edit-incident/edit-incident.component */ "./src/app/Components/edit-incident/edit-incident.component.ts");
 /* harmony import */ var _Components_login_login_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Components/login/login.component */ "./src/app/Components/login/login.component.ts");
+/* harmony import */ var _Components_dashbord_dashbord_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Components/dashbord/dashbord.component */ "./src/app/Components/dashbord/dashbord.component.ts");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm5/ng2-charts.js");
+
+
 
 
 
@@ -1839,7 +2324,8 @@ var AppModule = /** @class */ (function () {
                 _form_trial_form_trial_component__WEBPACK_IMPORTED_MODULE_20__["FormTrialComponent"],
                 _Components_incident_list_incident_list_component__WEBPACK_IMPORTED_MODULE_21__["IncidentListComponent"],
                 _Components_edit_incident_edit_incident_component__WEBPACK_IMPORTED_MODULE_22__["EditIncidentComponent"],
-                _Components_login_login_component__WEBPACK_IMPORTED_MODULE_23__["LoginComponent"]
+                _Components_login_login_component__WEBPACK_IMPORTED_MODULE_23__["LoginComponent"],
+                _Components_dashbord_dashbord_component__WEBPACK_IMPORTED_MODULE_24__["DashbordComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -1850,6 +2336,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["BrowserAnimationsModule"],
                 _material_material_module__WEBPACK_IMPORTED_MODULE_19__["MaterialModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_25__["ChartsModule"]
+                // MatRadioButton
             ],
             providers: [
                 { provide: _angular_common__WEBPACK_IMPORTED_MODULE_5__["APP_BASE_HREF"], useValue: '/' },

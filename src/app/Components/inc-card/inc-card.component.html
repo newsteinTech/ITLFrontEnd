@@ -1,0 +1,29 @@
+<div class="card" style="width: 22rem;">
+    <img class="card-img-top" src="../../../assets/Images/IncidentCard2.jpg" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Incident & CI</h5>
+        <p class="card-text">Total Incident: {{incSum}}</p>
+        <p class="card-text">Affected CI: {{ciNum}} </p>
+        <canvas
+        baseChart
+        [chartType]="'horizontalBar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)"
+        >
+    </canvas>
+    </div>
+    <div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <a class="card-link" class="btn btn-warning" (click) = "createInc(0)">Create Incident </a>
+            </div>            
+            <div class="col-md-6">
+                <a class="card-link" class="btn btn-warning" (click) = "createInc(1)" > View Incident </a>
+            </div>
+        </div>
+    </div>
+</div>

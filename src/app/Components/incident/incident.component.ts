@@ -77,7 +77,7 @@ export class IncidentComponent implements OnInit {
       console.log(err.error);
       if(err.error == "Access Denied."){
 
-        this.routes.navigate[""];
+        this.routes.navigate(["/dashboard"]);
         alert("Access Denied");
         
       }
@@ -204,7 +204,7 @@ export class IncidentComponent implements OnInit {
     this.service.createIncident(this.createInc).subscribe((data:any)=>{
 
       console.log(data);
-      // window.location.reload();
+      window.location.reload();
       
     },(err:any)=>{
 

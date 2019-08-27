@@ -1,0 +1,35 @@
+<!-- <div class="col-lg-12 text-center" *ngIf = "pieChartData != null">
+<h2 class="text-center">Incident States</h2>
+    <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+    </canvas>
+</div> -->
+
+<div class="container row">
+    <div class="col-lg-2"></div>
+        <div class="col-lg-10 text-center">
+          <h2 class="text-center">Incident States</h2>
+
+</div>
+</div>
+<div class="container row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-10">
+    <div *ngIf = "pieChartData != null">
+        <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+    </canvas>
+    </div>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+    </div>
+</div>

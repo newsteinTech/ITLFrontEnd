@@ -8,6 +8,7 @@ import { FormTrialComponent } from './form-trial/form-trial.component';
 import { IncidentListComponent } from './Components/incident-list/incident-list.component';
 import { EditIncidentComponent } from './Components/edit-incident/edit-incident.component';
 import { LoginComponent } from './Components/login/login.component';
+import { DashbordComponent } from './Components/dashbord/dashbord.component';
 
 const routes: Routes = [
   {path:"users",component:UsersComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"trialForm",component:FormTrialComponent},
   {path:"incidentList",component:IncidentListComponent},
   {path:"editIncident",component:EditIncidentComponent},
-  {path:"login",component:LoginComponent}
+  {path:"login",component:LoginComponent},
+  {path:"dashboard",component:DashbordComponent}
 ];
 
 @NgModule({

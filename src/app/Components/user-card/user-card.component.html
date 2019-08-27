@@ -1,0 +1,31 @@
+<div class="card" style="width: 22rem;">
+<img class="card-img-top" src="../../../assets/Images/usersCard.jpg" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Users & Groups</h5>
+        <p class="card-text">Total Users: {{userNum}}</p>
+        <p class="card-text">Total Groups: {{grpNum}}</p>
+        <canvas
+        baseChart
+        [chartType]="'horizontalBar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)"
+        >
+    </canvas>
+    </div>
+    <div >
+    <div class="card-body row">
+        <div class="col-md-6">
+            <a class="card-link" class="btn btn-warning" (click)="user(1)" >Create User </a>
+        </div>
+                        
+        <div class="col-md-6">
+            <a class="card-link" class="btn btn-warning" (click)="user(0)" > View User </a>
+        </div>
+    </div>
+    </div>
+</div>
+
