@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserLogin } from 'src/app/models/user-login';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,32 +13,44 @@ import { UserLogin } from 'src/app/models/user-login';
 export class LoginComponent implements OnInit {
 
   public userLoginRequest: UserLogin;
-
-  constructor(private _user: UserService, private router: Router) { 
-    this.userLoginRequest = new UserLogin();
+  public isLogin: boolean;
+  constructor(private userLoggedIn: LoginService, private router: Router, private __user: UserService) { 
+    this.userLoginRequest = new UserLogin();    
   }
 
   ngOnInit() {
+    let item= localStorage.getItem('accessToken');
+    if(item!=null)
+    localStorage.removeItem('accessToken');
+    //console.log(item); 
   }
 
   public loginHandler(){
-  
-    console.log(this.userLoginRequest);
-    this._user.userLogin(this.userLoginRequest).subscribe(res=>{
-      console.log(res);
-      localStorage.setItem('accessToken', res.data)
+
+    this.__user.getUserByUserId(this.userLoginRequest).subscribe(res=>{
+     this.userLoggedIn.userRole = res.data.Role;
+     console.log(res);
     },
-    error=>{
-      console.log(error);
+    err=>{
+      console.log(err);
     })
 
-    this._user.getUserByUserId(this.userLoginRequest).subscribe(res=>{
-      console.log(res);
+
+    this.userLoggedIn.userLogin(this.userLoginRequest).subscribe(res=>{
+      console.log(res.data.accessToken);
+
+      if(res.data == null){
+        this.isLogin = false;
+      }
+      else{
+      localStorage.setItem('accessToken', res.data.accessToken)
       this.router.navigate(['dashboard'])
+      }
     },
     error=>{
       console.log(error);
-    })
+      this.isLogin = false;
+    })  
 
     
   }

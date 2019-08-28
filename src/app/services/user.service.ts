@@ -21,16 +21,25 @@ export class UserService {
   
   constructor(private httpClient: HttpClient) {
 
-    let token= localStorage.getItem('accessToken');
+    let token= localStorage.getItem('accessToken'); 
+    console.log(token);
 
     this.headers= new HttpHeaders({
        "Content-Type" : "application/json",
-       "Authorization": token
+       "Authorization": token 
     })
     this.host= "http://localhost:3000/api/user/"
   }
  
   public getAllUsers():Observable<ApiResponse>{
+
+    let token= localStorage.getItem('accessToken'); 
+    console.log(token);
+    
+    this.headers= new HttpHeaders({
+       "Content-Type" : "application/json",
+       "Authorization": token 
+    })
 
     let url: string = this.host + "getAllUsers"
 
@@ -46,15 +55,16 @@ export class UserService {
 
   }
 
-  public userLogin(request: UserLogin):Observable<ApiResponse>{
-
-    let url: string = this.host + "login"
-
-    return this.httpClient.post<ApiResponse>(url, request, {headers:this.headers});
-  }
-
   public createUser(request: User):Observable<ApiResponse>{
 
+    let token= localStorage.getItem('accessToken'); 
+    console.log(token);
+    
+    this.headers= new HttpHeaders({
+       "Content-Type" : "application/json",
+       "Authorization": token 
+    })
+    
     let url: string = this.host + "createUser"
 
     return this.httpClient.post<ApiResponse>(url, request, {headers:this.headers});

@@ -26,6 +26,7 @@ import { IncidentByAssignedToComponent } from './components/incident-by-assigned
 import { ProfileComponent } from './components/profile/profile.component';
 import { ChartsModule } from "ng2-charts";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     UserListPopupComponent,
     IncidentByAssignedToComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

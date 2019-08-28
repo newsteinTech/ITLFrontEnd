@@ -13,6 +13,7 @@ import { UserListPopupComponent } from './components/user-list-popup/user-list-p
 import { IncidentByAssignedToComponent } from './components/incident-by-assigned-to/incident-by-assigned-to.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
   {path:'profile', component: ProfileComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'addUser', component: AddUserComponent},
   {path:'editUser', component: EditUserComponent},
   {path:'login', component: LoginComponent},
+  {path:'logout', component: LogoutComponent},
   {path:'incidentList', component: IncidentListComponent},
   {path:'incidentByAssignedTo', component: IncidentByAssignedToComponent},
   {path:'openIncident', component: NewIncidentComponent},

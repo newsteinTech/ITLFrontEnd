@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import {Sort} from '@angular/material/sort';
 import { GroupService } from 'src/app/services/group.service';
+import { LoginService } from 'src/app/services/login.service';
 
 
 
@@ -24,8 +25,9 @@ export class UserComponent implements OnInit {
   public numberOfPages: number;
   public pageNum: number[];
   public currentPage: number;
+  public role: string;
 
-  constructor(private _user: UserService, private _group: GroupService, private router: Router) { 
+  constructor(private _user: UserService, private _group: GroupService, private router: Router, private userLoggedIn: LoginService) { 
     this.pagingStartIndex = 0;
     this.displayData =[];
     this.sortedData=[];
@@ -36,6 +38,8 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
 
+    this.role= this.userLoggedIn.userRole;
+    console.log(this.userLoggedIn.userRole)
     // get all users and set number of pages according to the number of records of users
     //and display records according to initial pagesize
     this._user.getAllUsers().subscribe(res=>{
