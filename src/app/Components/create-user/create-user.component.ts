@@ -11,9 +11,22 @@ import { Router } from '@angular/router';
 export class CreateUserComponent implements OnInit {
 
   userData:ReqUser;
+  existingGroups: Array<any>;
   constructor( private services:UsersService, private routes:Router ) { 
 
     this.userData = new ReqUser("","","","",[],"","");
+    this.services.getGroup().subscribe((data:any)=>{
+      console.log(data);
+      this.existingGroups = data.data;
+      console.log(this.existingGroups);
+    },(err:any)=>{
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
+    })
 
   }
 
@@ -33,6 +46,12 @@ export class CreateUserComponent implements OnInit {
     },(error)=>{
 
       console.log(error);
+      if(error.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
 
     })  
 

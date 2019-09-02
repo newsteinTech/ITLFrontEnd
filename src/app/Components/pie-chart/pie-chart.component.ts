@@ -39,7 +39,7 @@ export class PieChartComponent implements OnInit {
       
         "#FF6384",
         "#4BC0C0",
-        "#FFCE56",
+        "#FF8C00",
         "#E7E9ED",
         "#36A2EB"
       ]}

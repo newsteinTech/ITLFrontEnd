@@ -47,6 +47,12 @@ export class IncidentListComponent implements OnInit {
     },(err:any)=>{
 
       console.log(err);
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
 
     })
 

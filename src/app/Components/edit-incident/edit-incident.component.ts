@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IncidentService } from 'src/app/Services/incident.service';
 import { IncidentRes } from 'src/app/Class/incident-res';
 import { Incident } from 'src/app/Calss/incident';
@@ -44,6 +44,12 @@ export class EditIncidentComponent implements OnInit {
     },err=>{
 
       console.log(err);
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
 
     });
 

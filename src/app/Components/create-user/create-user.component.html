@@ -37,9 +37,10 @@
                     </div>
                     <br>
                     <br>
-                    <select multiple class="form-control">
-                        <option>Choose Groups</option>
-                    </select>
+                    <label>Select Group</label>
+                            <select multiple class="form-control" *ngIf = "existingGroups != null" >
+                                <option *ngFor = "let gr of existingGroups" [(ngModel)] = existingGroups  name="{{gr.Name}}" (click) = "selectGroup(gr)">{{gr.Name}}</option>
+                            </select>
                     <br>
                     <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block" (click) = "createUser()" >
                 </form>

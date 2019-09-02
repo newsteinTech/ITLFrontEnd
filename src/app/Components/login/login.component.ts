@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         console.log(data.data);
         console.log(email);
         localStorage.setItem('email',data.data);
-        this.routes.navigate(['']);
+        this.routes.navigate(['dashboard']);
 
       }
       

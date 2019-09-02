@@ -38,6 +38,12 @@ export class UsersComponent implements OnInit {
     },(err:any)=>{
 
       console.log(err);
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
 
     })
 
@@ -77,6 +83,12 @@ export class UsersComponent implements OnInit {
     },(err:any)=>{
 
       console.log(err);
+      if(err.error == "Access Denied."){
+
+        this.routes.navigate(["/dashboard"]);
+        alert("Access Denied");
+        
+      }
 
     })
 
