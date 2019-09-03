@@ -117,9 +117,9 @@
               <option>Closed</option>
               <option>Cancelled</option>
             </select>
-            <div *ngIf="(incidentRequest.State!=New || incidentRequest.State!=NULL) && f.submitted && State.invalid" class="invalid-feedback">
+           <!--  <div *ngIf="(incidentRequest.State!=New || incidentRequest.State!=NULL) && f.submitted && State.invalid" class="invalid-feedback">
               <div *ngIf="State.errors">You cannot choose a state other than 'New' while creating the incident</div>
-            </div>
+            </div> -->
         </div>
     </div>
 

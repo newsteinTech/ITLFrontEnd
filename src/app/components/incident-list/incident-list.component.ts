@@ -101,7 +101,7 @@ export class IncidentListComponent implements OnInit {
 
 
   //for server-side pagination
-  private Paginate(num: number){
+  public Paginate(num: number){
     
     this.pageNum=[];
 
