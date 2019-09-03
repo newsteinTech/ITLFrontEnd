@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Incident } from 'src/app/models/incident';
-import { IncidentService } from 'src/app/services/incident.service';
-import { UserService } from 'src/app/services/user.service';
-import { GroupService } from 'src/app/services/group.service';
-import { Group } from 'src/app/models/group';
-import { User } from 'src/app/models/user';
+import { Incident } from '../../models/incident';
+import { IncidentService } from '../../services/incident.service';
+import { UserService } from '../../services/user.service';
+import { GroupService } from '../../services/group.service';
+import { Group } from '../../models/group';
+import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import { UserComponent } from '../user/user.component';
 import { UserListPopupComponent } from '../user-list-popup/user-list-popup.component';
-import { group } from '@angular/animations';
 
 
 @Component({

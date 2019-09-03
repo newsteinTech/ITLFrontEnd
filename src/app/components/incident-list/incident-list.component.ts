@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { IncidentService } from 'src/app/services/incident.service';
+import { IncidentService } from '../../services/incident.service';
 import { Route, Router } from '@angular/router';
-import { Incident } from 'src/app/models/incident';
-import { Pagination } from 'src/app/models/pagination';
-import { UserService } from 'src/app/services/user.service';
-import { User } from 'src/app/models/user';
-import { GroupService } from 'src/app/services/group.service';
-import { Group } from 'src/app/models/group';
+import { Incident } from '../../models/incident';
+import { Pagination } from '../../models/pagination';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
+import { GroupService } from '../../services/group.service';
+import { Group } from '../../models/group';
 
 @Component({
   selector: 'app-incident-list',

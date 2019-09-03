@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Incident } from 'src/app/models/incident';
-import { IncidentService } from 'src/app/services/incident.service';
+import { Incident } from '../../models/incident';
+import { IncidentService } from '../../services/incident.service';
 import { Router } from '@angular/router';
-import { GroupService } from 'src/app/services/group.service';
-import { Group } from 'src/app/models/group';
-import { UserService } from 'src/app/services/user.service';
-import { User } from 'src/app/models/user';
+import { GroupService } from '../../services/group.service';
+import { Group } from '../../models/group';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-edit-incident',

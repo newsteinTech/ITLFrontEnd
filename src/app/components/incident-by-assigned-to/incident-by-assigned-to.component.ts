@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Incident } from 'src/app/models/incident';
-import { IncidentService } from 'src/app/services/incident.service';
+import { Incident } from '../../models/incident';
+import { IncidentService } from '../../services/incident.service';
 import { Router } from '@angular/router';
 
 @Component({

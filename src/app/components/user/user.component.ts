@@ -1,12 +1,10 @@
 import { Component, OnInit} from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
+import { User } from '../../models/user';
 import {Sort} from '@angular/material/sort';
-import { GroupService } from 'src/app/services/group.service';
-import { LoginService } from 'src/app/services/login.service';
-
-
+import { GroupService } from '../../services/group.service';
+import { LoginService } from '../../services/login.service';
 
 
 @Component({

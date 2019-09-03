@@ -1,11 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChartOptions, ChartType } from 'chart.js';
 import { Label, SingleDataSet, monkeyPatchChartJsTooltip, monkeyPatchChartJsLegend, Color } from 'ng2-charts';
-import { UserService } from 'src/app/services/user.service';
-import { IncidentService } from 'src/app/services/incident.service';
-import { Incident } from 'src/app/models/incident';
-import { GroupService } from 'src/app/services/group.service';
-import { of } from 'rxjs';
+import { IncidentService } from '../../services/incident.service';
+import { Incident } from '../../models/incident';
 import { Router } from '@angular/router';
 
 @Component({
