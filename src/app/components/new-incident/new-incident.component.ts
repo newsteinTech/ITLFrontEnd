@@ -143,7 +143,7 @@ export class NewIncidentComponent implements OnInit {
       console.log(this.incidentRequest);
       this._incident.createIncident(this.incidentRequest).subscribe(res=>{
       console.log(res);
-      //this.router.navigate(['incidentList']);
+      this.router.navigate(['incidentList']);
       },
       error=>{
       console.log(error);
@@ -173,8 +173,8 @@ export class NewIncidentComponent implements OnInit {
       this.incidentRequest.SLA = date;
     }
 
-    if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') ||
-    (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
+    if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') || (urgency=='High' && impact=='Low') ||
+    (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High')){
       this.incidentRequest.Priority='Medium - 3'
       let date = new Date();
       date.setDate(date.getDate() + 7)

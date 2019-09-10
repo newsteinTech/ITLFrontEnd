@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'userList', component: UserComponent},
   {path:'addUser', component: AddUserComponent},
   {path:'editUser', component: EditUserComponent},
-  {path:'login', component: LoginComponent},
+  {path:'', component: LoginComponent},
   {path:'logout', component: LogoutComponent},
   {path:'incidentList', component: IncidentListComponent},
   {path:'incidentByAssignedTo', component: IncidentByAssignedToComponent},

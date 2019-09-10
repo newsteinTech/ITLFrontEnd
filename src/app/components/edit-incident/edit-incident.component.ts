@@ -164,7 +164,7 @@ export class EditIncidentComponent implements OnInit {
     }
 
     if((impact=='Medium' && urgency=='Medium') || (urgency=='Low' && impact=='Medium') ||
-    (impact=='Low' && urgency=='Medium') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
+    (impact=='Low' && urgency=='High') || (urgency=='Low' && impact=='High') || (impact=='Low' && urgency=='Medium')){
       this.updatedData.Priority='Medium - 3'
       let date = new Date();
       date.setDate(date.getDate() + 7)
