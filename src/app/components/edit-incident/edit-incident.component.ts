@@ -18,12 +18,14 @@ export class EditIncidentComponent implements OnInit {
   public subcategory: string[];
   public groupData: Group[];
   public userData: User[];
-  public assignedToList: string[];
+  public assignedToList: any[];
   public days: number;
   public hours: number;
   public minute: number;
   public seconds: number;
   public remainingSLA: string;
+  public assignedMember: string;
+  public asg: string;
 
   constructor(private _incident: IncidentService, private _group: GroupService, private _user: UserService, private router: Router) { 
     this.assignedToList= [];
@@ -32,14 +34,14 @@ export class EditIncidentComponent implements OnInit {
   ngOnInit() {
 
     this.updatedData = this._incident.incidentServiceData;
+    this.asg = this.updatedData.AssignmentGroup.GroupId;
+    this.assignedMember = this.updatedData.AssignedTo.Name;
     console.log(this.updatedData);
     this.updatedData.remTime = (new Date(this.updatedData.SLA).getTime() - new Date().getTime())/1000;
     this.startTimer(this.updatedData.remTime);
     this.userData= this._user.userServiceList;
     this.groupData= this._group.groupServiceData;
 
-    //to display assignedto when page loads
-    this.assignedToHandler(this.updatedData.AssignmentGroup.GroupId);
     //to display subcategory when page loads
     this.subcategoryHandler(this.updatedData.Category);
 
@@ -48,11 +50,18 @@ export class EditIncidentComponent implements OnInit {
   public updateIncidentHandler(){
 
     //add user's Object in AssignedTo field
-    for(let i=0;i<this.userData.length;i++){
+    /* for(let i=0;i<this.userData.length;i++){
       if(this.userData[i].Name==this.updatedData.AssignedTo.Name){
          this.updatedData.AssignedTo= this.userData[i]
       }
-    }
+    } */
+
+    this.assignedToList.forEach((cur:any)=>{
+     
+      if(cur.Name == this.assignedMember){
+        this.updatedData.AssignedTo = cur._id;
+      }
+    })
 
     //send back caller's objectid instead of userid
     for(let i=0;i<this.userData.length;i++){
@@ -78,26 +87,25 @@ export class EditIncidentComponent implements OnInit {
   }
 
 
-  public assignedToHandler(groupid: string){
-  
-    this.assignedToList=[];
+  public assignedToHandler(event){
 
-    //add assignmentGroup's object in updatedData
-     for(let i=0;i<this.groupData.length;i++){
-      if(this.groupData[i].GroupId==groupid){
-        this.updatedData.AssignmentGroup= this.groupData[i]
-      }
-    } 
+    let value = event.target.value;
 
-    console.log(this.updatedData.AssignmentGroup);
+    if(value != "Select Group"){
+      
+      this.groupData.forEach(cur => {
 
-    //display groupmembers of the selected group
-    for(let i=0;i<this.userData.length;i++){
-      if(this.updatedData.AssignmentGroup.GroupMembers.indexOf(this.userData[i]._id)>=0){
-        this.assignedToList.push(this.userData[i].Name)
-      }
-    } 
-    
+        if(cur.GroupId == value){
+
+          console.log(cur.GroupMembers)
+          this.assignedToList = cur.GroupMembers;
+          this.updatedData.AssignmentGroup = cur;
+            
+        }
+        
+      });
+    }
+
   }
 
   public subcategoryHandler(category: string){

@@ -21,12 +21,13 @@ export class NewIncidentComponent implements OnInit {
   public groupData: Group[];
   public userData: User[];
   public subcategory: string[];
-  public assignedToList: string[];
+  public assignedToList: any[];
   public groupSelected: string;
   public assignedTo: User;
   public userId: string;
   public count: number;
   public IncidentNum: string;
+  public assignedMember: string;
 
   constructor(public dialog: MatDialog, private _incident: IncidentService, private _user: UserService, private _group: GroupService, private router: Router) {
     this.incidentRequest = new Incident();
@@ -98,27 +99,26 @@ export class NewIncidentComponent implements OnInit {
     return alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.incidentRequest, null, 4));
   }
 
-  public assignedToHandler(groupid: string){
-  
-    this.assignedToList=[];
 
-    console.log(groupid)
-    //add assignmentGroup's object in request
-     for(let i=0;i<this.groupData.length;i++){
-      if(this.groupData[i].GroupId==groupid){
-        this.incidentRequest.AssignmentGroup= this.groupData[i]
-      }
-    } 
+  public assignedToHandler(event){
 
-    console.log(this.incidentRequest.AssignmentGroup);
+    let value = event.target.value;
 
-    //display groupmembers of the selected group
-    for(let i=0;i<this.userData.length;i++){
-      if(this.incidentRequest.AssignmentGroup.GroupMembers.indexOf(this.userData[i]._id)>=0){
-        this.assignedToList.push(this.userData[i].Name)
-      }
-    } 
-    
+    if(value != "Select Group"){
+      
+      this.groupData.forEach(cur => {
+
+        if(cur.GroupId == value){
+
+          console.log(cur.GroupMembers)
+          this.assignedToList = cur.GroupMembers;
+          this.incidentRequest.AssignmentGroup = cur;
+            
+        }
+        
+      });
+    }
+
   }
 
   public createIncidentHandler(){
@@ -134,11 +134,12 @@ export class NewIncidentComponent implements OnInit {
       }
 
       //add user's Object in request's AssignedTo field
-      for(let i=0;i<this.userData.length;i++){
-        if(this.userData[i].Name==this.assignedTo.Name){
-           this.incidentRequest.AssignedTo= this.userData[i]
+      this.assignedToList.forEach((cur:any)=>{
+     
+        if(cur.Name == this.assignedMember){
+          this.incidentRequest.AssignedTo = cur._id;
         }
-      }
+      })
 
       console.log(this.incidentRequest);
       this._incident.createIncident(this.incidentRequest).subscribe(res=>{

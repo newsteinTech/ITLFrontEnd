@@ -89,7 +89,7 @@ export class DashboardComponent implements OnInit {
       this.barChartData = res.data;
       this.barChartData[0].label = 'Incidents Assigned';
       this.barChartData[1].label = 'Incidents Resolved';
-      this.barChartLabels = ['Group1', 'Group2', 'Group3', 'Group4', 'Group5']
+      this.barChartLabels = ['Sales', 'IT', 'HR', 'Operations Mgmt.', 'Finance']
       this.barChartReady= true;
     },
     err=>{
