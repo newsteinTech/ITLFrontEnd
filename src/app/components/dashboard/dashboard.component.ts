@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ChartOptions, ChartType } from 'chart.js';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, SingleDataSet, monkeyPatchChartJsTooltip, monkeyPatchChartJsLegend, Color } from 'ng2-charts';
 import { IncidentService } from '../../services/incident.service';
 import { Incident } from '../../models/incident';
@@ -47,6 +47,7 @@ export class DashboardComponent implements OnInit {
 
   public barChartReady: boolean= false;
   public incidentData: Incident[];
+
 
   constructor(private _incident: IncidentService, private router: Router ) { 
     monkeyPatchChartJsTooltip();

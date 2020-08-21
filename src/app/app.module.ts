@@ -27,6 +27,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ChartsModule } from "ng2-charts";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { BubbleChartComponent } from './components/bubble-chart/bubble-chart.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     IncidentByAssignedToComponent,
     ProfileComponent,
     DashboardComponent,
-    LogoutComponent
+    LogoutComponent,
+    BubbleChartComponent
   ],
   imports: [
     BrowserModule,

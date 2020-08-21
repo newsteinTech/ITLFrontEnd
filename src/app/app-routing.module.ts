@@ -14,6 +14,7 @@ import { IncidentByAssignedToComponent } from './components/incident-by-assigned
 import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { BubbleChartComponent } from './components/bubble-chart/bubble-chart.component';
 
 const routes: Routes = [
   {path:'profile', component: ProfileComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'userListPopup', component: UserListPopupComponent},
   {path:'editIncident', component: EditIncidentComponent},
   {path:'form1', component: ReactiveFormValidationComponent},
-  {path:'form2', component: TemplateDrivenFormValidationComponent}
+  {path:'form2', component: TemplateDrivenFormValidationComponent},
+  {path:'chart', component: BubbleChartComponent}
 ];
 
 @NgModule({
